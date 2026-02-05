@@ -1,224 +1,225 @@
-export const languages: Record<'fr' | 'en', { name: string; flag: string }> = {
-  fr: { name: 'Français', flag: 'fr' },
+export const languages: Record<'es' | 'en', { name: string; flag: string }> = {
+  es: { name: 'Español', flag: 'es' },
   en: { name: 'English', flag: 'us' },
 } as const;
 
-export const defaultLanguage = 'fr';
+export const defaultLanguage = 'es';
 
 export type LanguageCode = keyof typeof languages;
 
 export const ui = {
-  fr: {
+  es: {
     projectsContent: {
       sampleProject: {
-        title: 'Exemple de Projet',
-        description: "Ceci est un projet d'exemple pour le template.",
-        imageAltText: "Image placeholder pour le projet d'exemple",
-        categoryText: 'Application Web',
-        dateText: 'Janvier 2025',
+        title: 'Proyecto de Ejemplo',
+        description: "Este es un proyecto de ejemplo para el template.",
+        imageAltText: "Imagen de marcador de posición para el proyecto de ejemplo",
+        categoryText: 'Aplicación Web',
+        dateText: 'Enero 2025',
         detailedDescription:
-          "Une description plus détaillée de ce projet d'exemple, montrant comment structurer le contenu pour la page de détail du projet.",
+          "Una descripción más detallada de este proyecto de ejemplo, mostrando cómo estructurar el contenido para la página de detalle del proyecto.",
         keyFeatures: {
           responsiveDesign: {
-            title: 'Design Adaptatif',
-            description: "Le projet s'adapte à toutes les tailles d'écran.",
+            title: 'Diseño Responsivo',
+            description: "El proyecto se adapta a todos los tamaños de pantalla.",
           },
           contentManagement: {
-            title: 'Gestion de Contenu Facile',
+            title: 'Gestión de Contenido Fácil',
             description:
-              'Permet une gestion aisée du contenu via des fichiers Markdown ou un CMS.',
+              'Permite una gestión fácil del contenido a través de archivos Markdown o un CMS.',
           },
         },
         galleryImages: {
-          // sampleGalleryImage1: { // Si tu actives la galerie pour l'exemple
-          //   alt: "Texte alternatif pour l'image de galerie 1",
-          //   caption: "Légende pour l'image de galerie 1",
+          // sampleGalleryImage1: { // Si activas la galería para el ejemplo
+          //   alt: "Texto alternativo para la imagen de galería 1",
+          //   caption: "Leyenda para la imagen de galería 1",
           // },
         },
         challenges:
-          'Description des défis rencontrés lors de la création de ce projet exemple.',
-        learnings: 'Description des apprentissages tirés de ce projet exemple.',
+          'Descripción de los desafíos encontrados al crear este proyecto de ejemplo.',
+        learnings: 'Descripción de los aprendizajes del proyecto de ejemplo.',
       },
     },
     skillsContent: {
-      frontendDevelopment: {
-        title: 'Développement Frontend',
+      sfccDevelopment: {
+        title: 'Salesforce Commerce Cloud (SFCC)',
         description:
-          "Création d'interfaces utilisateur interactives et performantes.",
+          'Arquitectura SFRA, OCAPI/REST, pasarelas de pago (Adyen, PayPal), y plataformas multisite escalables.',
       },
-      backendDevelopment: {
-        title: 'Développement Backend',
-        description: "Construction de logiques serveur robustes et d'API.",
-      },
-      uiUxDesign: {
-        title: 'Design UI/UX',
+      architectureDesign: {
+        title: 'Diseño de Arquitectura',
         description:
-          "Conception d'expériences utilisateur intuitives et esthétiques.",
+          'Decisiones técnicas end-to-end, integraciones complejas, performance y seguridad en sistemas de e-commerce.',
       },
-      devOps: {
-        title: 'DevOps',
+      cicdAutomation: {
+        title: 'CI/CD y DevOps',
         description:
-          'Automatisation des processus de développement et de déploiement.',
+          'Diseño y automatización de pipelines, reducción de time-to-market, deployments seguros y monitoreo en producción.',
+      },
+      requirementsAnalysis: {
+        title: 'Análisis de Requisitos',
+        description:
+          'Toma de requisitos con negocio, traducción técnico-funcional, coordinación con proveedores y equipos ágiles remotos.',
       },
     },
     site: {
-      title: 'Mon Super Template',
+      title: 'Daniel Redondo Blanco | Desarrollador SFCC Senior',
       description:
-        'Un template Astro moderne et performant pour démarrer votre projet.',
+        'Desarrollador Senior de Salesforce Commerce Cloud con más de 5 años diseñando soluciones e-commerce escalables y arquitecturas robustas.',
     },
     nav: {
-      home: 'Accueil',
+      home: 'Inicio',
       blog: 'Blog',
-      contact: 'Contact',
-      projects: 'Projets',
-      tips: 'Astuces',
+      contact: 'Contacto',
+      projects: 'Proyectos',
+      tips: 'Tips',
     },
     footer: {
-      rights: 'Tous droits réservés.',
+      rights: 'Todos los derechos reservados.',
     },
     homePage: {
-      pageTitle: 'Accueil |  Développeur FullStack',
+      pageTitle: 'Inicio | Daniel Redondo Blanco - Desarrollador SFCC Senior',
       pageDescription:
-        "Bienvenue sur le portfolio de YOUR_NAME, développeur FullStack passionné par la création d'expériences web innovantes.",
-      heroGreeting: "Salut, c'est YOUR_NAME",
-      heroSubtitlePart1: 'Développeur FullStack',
-      heroSubtitlePart2: 'Passionné UI/UX',
-      heroIntroduction: 'Ajouter une introduction ici.',
-      heroViewWorkButton: 'Mes réalisations',
-      heroContactButton: 'Me contacter',
+        'Desarrollador Senior de Salesforce Commerce Cloud con más de 5 años diseñando soluciones e-commerce escalables, arquitecturas robustas e integraciones complejas.',
+      heroGreeting: 'Soy Daniel Redondo Blanco',
+      heroSubtitlePart1: 'Desarrollador SFCC Senior',
+      heroSubtitlePart2: 'Especializado en e-commerce',
+      heroIntroduction: 'Especialista en Salesforce Commerce Cloud con más de 5 años diseñando y manteniendo plataformas e-commerce escalables. Experto en SFRA, OCAPI/REST, CI/CD y decisiones técnicas enfocadas en performance y seguridad.',
+      heroViewWorkButton: 'Ver Mi Trabajo',
+      heroContactButton: 'Contactar',
       heroImageAlt:
-        'Illustration représentant YOUR_NAME ou un concept de développement',
-      featuredProjectsTitle: '3 derniers projets',
+        'Ilustración representando a Daniel Redondo Blanco y concepto de desarrollo e-commerce',
+      featuredProjectsTitle: 'Proyectos Destacados',
       featuredProjectsDescription:
-        "Voici quelques projets sur lesquels j'ai récemment travaillé. N'hésitez pas à les explorer !",
-      projectCardViewProject: 'Voir le projet',
-      projectCardViewCode: 'Voir le code',
-      imageNotAvailable: 'Image bientôt disponible',
-      mySkillsTitle: 'Mes Compétences',
+        'Proyectos de e-commerce a gran escala con Salesforce Commerce Cloud, incluyendo arquitectura multisite, integraciones de pagos y optimizaciones de performance.',
+      projectCardViewProject: 'Ver Proyecto',
+      projectCardViewCode: 'Ver Código',
+      imageNotAvailable: 'Imagen no disponible aún',
+      mySkillsTitle: 'Mis Habilidades',
       mySkillsDescription:
-        "Explorez l'expertise et les capacités qui définissent mon travail et ma passion.",
+        "Explora la experiencia y las capacidades que definen mi trabajo y mi pasión.",
     },
     blogPage: {
-      pageTitle: 'Mon Blog Technique',
+      pageTitle: 'Blog Técnico de Daniel',
       pageDescription:
-        "Articles et réflexions sur le développement web, l'architecture logicielle, et les nouvelles technologies.",
-      title: 'Mon Blog Technique',
+        'Artículos sobre Salesforce Commerce Cloud, arquitectura de e-commerce, mejores prácticas en CI/CD y decisiones técnicas en plataformas escalables.',
+      title: 'Blog Técnico',
       description:
-        "Articles et réflexions sur le développement web, l'architecture logicielle, et les nouvelles technologies.",
+        'Artículos sobre Salesforce Commerce Cloud, arquitectura de e-commerce, mejores prácticas en CI/CD y decisiones técnicas en plataformas escalables.',
       comingSoon:
-        'Les articles de blog apparaîtront ici bientôt. Revenez plus tard !',
-      heroImageAlt: "Image de couverture pour l'article : ",
-      publishedOn: 'Publié le : ',
-      readMore: 'Lire la suite',
-      readingTimeSuffix: 'min de lecture',
-      searchPlaceholder: 'Rechercher des articles...',
-      filterByTagButtonLabel: 'Filtrer par tag',
-      noTagFound: 'Aucun tag trouvé.',
-      selectTagCommandPlaceholder: 'Rechercher un tag...',
-      allTagsLabel: 'Tous les tags',
-      noPostsFound: 'Aucun article trouvé.',
+        'Los artículos del blog aparecerán pronto. ¡Vuelve más tarde!',
+      heroImageAlt: "Imagen de portada del artículo: ",
+      publishedOn: 'Publicado el: ',
+      readMore: 'Leer más',
+      readingTimeSuffix: 'min de lectura',
+      searchPlaceholder: 'Buscar artículos...',
+      filterByTagButtonLabel: 'Filtrar por etiqueta',
+      noTagFound: 'Ninguna etiqueta encontrada.',
+      selectTagCommandPlaceholder: 'Buscar etiqueta...',
+      allTagsLabel: 'Todas las etiquetas',
+      noPostsFound: 'No se encontraron artículos.',
     },
     blogPost: {
-      publishedOn: 'Publié le : ',
-      updatedOn: 'Mis à jour le : ',
-      heroImageAlt: "Image de couverture pour l'article : ",
-      backToList: 'Retour à la liste des articles',
-      readingTimeSuffix: 'min de lecture',
-      relatedPostsTitle: 'Je te recommande aussi :',
-      readMore: 'Lire la suite',
-      editOnGithub: 'Proposer une modification sur GitHub',
+      publishedOn: 'Publicado el: ',
+      updatedOn: 'Actualizado el: ',
+      heroImageAlt: "Imagen de portada del artículo: ",
+      backToList: 'Volver a la lista de artículos',
+      readingTimeSuffix: 'min de lectura',
+      relatedPostsTitle: 'También te recomiendo:',
+      readMore: 'Leer más',
+      editOnGithub: 'Proponer una modificación en GitHub',
     },
     toc: {
-      title: "Sommaire de l'article",
+      title: "Tabla de contenidos del artículo",
     },
     contactPage: {
-      pageTitle: 'Me Contacter',
+      pageTitle: 'Contactar a Daniel',
       pageDescription:
-        "Discutons de ton projet, d'une collaboration potentielle, ou simplement pour échanger sur la tech !",
-      title: 'Me Contacter',
+        'Hablemos sobre tu proyecto de e-commerce, oportunidades de colaboración o simplemente para intercambiar ideas sobre tecnología y arquitectura SFCC.',
+      title: 'Contacta Conmigo',
       description:
-        "Discutons de ton projet, d'une collaboration potentielle, ou simplement pour échanger sur la tech !",
+        'Disponible para discutir proyectos de Salesforce Commerce Cloud, arquitectura escalable, integraciones complejas y oportunidades de colaboración.',
 
-      formTitle: 'Envoyer un message',
-      firstNameLabel: 'Prénom',
-      lastNameLabel: 'Nom',
+      formTitle: 'Enviar un mensaje',
+      firstNameLabel: 'Nombre',
+      lastNameLabel: 'Apellido',
       emailLabel: 'Email',
-      messageLabel: 'Message',
-      sendButtonLabel: 'Envoyer',
-      firstNamePlaceholder: 'Ton prénom',
+      messageLabel: 'Mensaje',
+      sendButtonLabel: 'Enviar',
+      firstNamePlaceholder: 'Tu nombre',
 
-      lastNamePlaceholder: 'Ton nom de famille',
-      emailPlaceholder: 'Ton adresse e-mail',
-      messagePlaceholder: 'Ton message ici...',
-      calendarTitle: 'Planifier un RDV',
+      lastNamePlaceholder: 'Tu apellido',
+      emailPlaceholder: 'Tu correo electrónico',
+      messagePlaceholder: 'Tu mensaje aquí...',
+      calendarTitle: 'Agendar una cita',
       calendarDescription:
-        'Tu préfères discuter de vive voix ? Réservez directement un créneau dans mon agenda.',
-      calendarButtonLabel: 'Voir mes disponibilités',
-      calendarLinkLabel: 'Voir mon agenda',
+        '¿Prefieres hablar directamente? Reserva un espacio en mi calendario.',
+      calendarButtonLabel: 'Ver mi disponibilidad',
+      calendarLinkLabel: 'Ver mi calendario',
       calendarPlaceHolder:
-        "L'intégration avec Google Calendar se fera bientôt...",
-      orSeparatorText: 'OU',
-      toastSuccessMessageSent: 'Message envoyé avec succès !',
-      toastErrorFailedToSend: "Échec de l'envoi du message.",
-      toastErrorUnexpected: "Une erreur inattendue s'est produite.",
-      toastErrorDetails: "Détails de l'erreur:",
-      toastErrorValidationFailed: 'Validation du formulaire échouée.',
+        "La integración con Google Calendar estará disponible pronto...",
+      orSeparatorText: 'O',
+      toastSuccessMessageSent: '¡Mensaje enviado exitosamente!',
+      toastErrorFailedToSend: "Error al enviar el mensaje.",
+      toastErrorUnexpected: "Ocurrió un error inesperado.",
+      toastErrorDetails: "Detalles del error:",
+      toastErrorValidationFailed: 'La validación del formulario falló.',
     },
     projectDetailPage: {
-      backToProjects: 'Retour aux Projets',
-      categoryLabel: 'Catégorie :',
-      dateLabel: 'Date :',
-      aboutTitle: 'À propos de ce projet',
-      keyFeaturesTitle: 'Fonctionnalités Clés',
-      galleryTitle: 'Galerie',
-      challengesTitle: 'Défis Rencontrés',
-      learningsTitle: 'Leçons Apprises',
-      visitProjectButton: 'Visiter le Projet',
-      viewCodeButton: 'Voir le Code',
+      backToProjects: 'Volver a Proyectos',
+      categoryLabel: 'Categoría:',
+      dateLabel: 'Fecha:',
+      aboutTitle: 'Acerca de este proyecto',
+      keyFeaturesTitle: 'Características Principales',
+      galleryTitle: 'Galería',
+      challengesTitle: 'Desafíos Encontrados',
+      learningsTitle: 'Lecciones Aprendidas',
+      visitProjectButton: 'Visitar Proyecto',
+      viewCodeButton: 'Ver Código',
     },
     projectsPage: {
-      title: 'Mes Projets',
-      metaTitle: 'Mes Projets | Portfolio',
-      metaDescription: 'Découvrez tous les projets.',
-      noProjects: 'Aucun projet à afficher pour le moment.',
+      title: 'Mis Proyectos',
+      metaTitle: 'Proyectos de Daniel | Salesforce Commerce Cloud',
+      metaDescription: 'Proyectos de e-commerce con Salesforce Commerce Cloud, integraciones y arquitecturas escalables.',
+      noProjects: 'No hay proyectos para mostrar en este momento.',
       noProjectsDescription:
-        "Il semble que vous n'ayez pas encore de projets à afficher.",
+        "Parece que aún no tienes proyectos para mostrar.",
     },
     notFoundPage: {
-      pageTitle: 'Page Non Trouvée',
-      title: 'Oups ! Page Non Trouvée',
+      pageTitle: 'Página No Encontrada',
+      title: '¡Oops! Página No Encontrada',
       message:
-        "Désolé, la page que vous recherchez ne semble pas exister. Vérifiez l'URL ou retournez à la page d'accueil.",
-      homeLink: "Retourner à l'Accueil",
+        'La página que buscas no existe. Verifica la URL o regresa al inicio.',
+      homeLink: 'Volver al Inicio',
     },
 
     tipsPage: {
-      metaTitle: 'Astuces de Développement',
+      metaTitle: 'Tips de SFCC y E-commerce',
       metaDescription:
-        'Découvrez des astuces et conseils rapides sur le développement web et la cloud computing.',
+        'Consejos y astuces sobre Salesforce Commerce Cloud, arquitectura de e-commerce, CI/CD y optimización de performance.',
       description:
-        'Découvrez des astuces et conseils rapides sur le développement web et la cloud computing.',
-      title: 'Nos Dernières Astuces',
-      noTips: 'Aucune astuce à afficher pour le moment.',
-      readTip: "Lire l'astuce",
-      backToList: 'Retour à la liste des astuces',
-      featuredTips: 'Astuces recommandées',
-      allTips: 'Toutes les astuces',
-      tipsAvailable: 'astuces disponibles',
-      tipAvailable: 'astuce disponible',
-      editOnGithub: 'Modifier sur GitHub',
+        'Consejos y astuces sobre Salesforce Commerce Cloud, arquitectura de e-commerce, CI/CD y optimización de performance.',
+      title: 'Últimos Tips y Consejos',
+      noTips: 'No hay tips para mostrar en este momento.',
+      readTip: "Leer tip",
+      backToList: 'Volver a la lista de tips',
+      featuredTips: 'Tips destacados',
+      allTips: 'Todos los tips',
+      tipsAvailable: 'tips disponibles',
+      tipAvailable: 'tip disponible',
+      editOnGithub: 'Editar en GitHub',
     },
     zodErrors: {
       // Common errors
-      invalid_type: 'Type invalide.',
-      invalid_type_received_undefined: 'Ce champ est requis.', // For required fields (fallback)
-      required_field_custom: 'Le champ {fieldName} est requis.',
+      invalid_type: 'Tipo inválido.',
+      invalid_type_received_undefined: 'Este campo es obligatorio.', // For required fields (fallback)
+      required_field_custom: 'El campo {fieldName} es obligatorio.',
       // String errors
-      too_small_string_minimum: 'Doit contenir au moins {minimum} caractères.',
-      too_big_string_maximum: 'Ne doit pas dépasser {maximum} caractères.',
-      invalid_string_email: 'Adresse e-mail invalide.',
-      invalid_string_url: 'URL invalide.',
-      invalid_string_uuid: 'UUID invalide.',
+      too_small_string_minimum: 'Debe contener al menos {minimum} caracteres.',
+      too_big_string_maximum: 'No debe exceder {maximum} caracteres.',
+      invalid_string_email: 'Correo electrónico inválido.',
+      invalid_string_url: 'URL inválida.',
+      invalid_string_uuid: 'UUID inválido.',
       // You can add more specific messages as needed
     },
   },
@@ -255,28 +256,31 @@ export const ui = {
       },
     },
     skillsContent: {
-      frontendDevelopment: {
-        title: 'Frontend Development',
+      sfccDevelopment: {
+        title: 'Salesforce Commerce Cloud (SFCC)',
         description:
-          'Building interactive and high-performance user interfaces.',
+          'SFRA architecture, OCAPI/REST, payment gateways (Adyen, PayPal), and scalable multisite platforms.',
       },
-      backendDevelopment: {
-        title: 'Backend Development',
-        description: 'Constructing robust server logic and APIs.',
+      architectureDesign: {
+        title: 'Architecture Design',
+        description:
+          'End-to-end technical decisions, complex integrations, performance and security in e-commerce systems.',
       },
-      uiUxDesign: {
-        title: 'UI/UX Design',
-        description: 'Designing intuitive and aesthetic user experiences.',
+      cicdAutomation: {
+        title: 'CI/CD & DevOps',
+        description:
+          'Pipeline design and automation, time-to-market reduction, secure deployments and production monitoring.',
       },
-      devOps: {
-        title: 'DevOps',
-        description: 'Automating development and deployment processes.',
+      requirementsAnalysis: {
+        title: 'Requirements Analysis',
+        description:
+          'Requirement gathering with business teams, technical-functional translation, vendor coordination and remote agile teams.',
       },
     },
     site: {
-      title: 'My Awesome Template',
+      title: 'Daniel Redondo Blanco | Senior SFCC Developer',
       description:
-        'A modern and performant Astro template to kickstart your project.',
+        'Senior Salesforce Commerce Cloud developer with 5+ years designing scalable e-commerce solutions and robust architectures.',
     },
     nav: {
       home: 'Home',
@@ -289,20 +293,20 @@ export const ui = {
       rights: 'All rights reserved.',
     },
     homePage: {
-      pageTitle: 'Home | YOUR_NAME - FullStack Developer',
+      pageTitle: 'Home | Daniel Redondo Blanco - Senior SFCC Developer',
       pageDescription:
-        'Welcome to the portfolio of YOUR_NAME, a FullStack developer passionate about creating innovative web experiences.',
-      heroGreeting: "Hi, I'm YOUR_NAME",
-      heroSubtitlePart1: 'Full Stack Developer',
-      heroSubtitlePart2: 'UI/UX Enthusiast',
-      heroIntroduction: 'Add an introduction here.',
+        'Senior Salesforce Commerce Cloud developer with 5+ years designing scalable e-commerce solutions, robust architectures and complex integrations.',
+      heroGreeting: "Hi, I'm Daniel Redondo Blanco",
+      heroSubtitlePart1: 'Senior SFCC Developer',
+      heroSubtitlePart2: 'E-commerce Specialist',
+      heroIntroduction: 'Specialized in Salesforce Commerce Cloud with 5+ years designing and maintaining scalable e-commerce platforms. Expert in SFRA, OCAPI/REST, CI/CD and technical decisions focused on performance and security.',
       heroViewWorkButton: 'View My Work',
       heroContactButton: 'Get In Touch',
       heroImageAlt:
-        'Illustration representing YOUR_NAME or a development concept',
-      featuredProjectsTitle: '3 latest projects',
+        'Illustration representing Daniel Redondo Blanco and e-commerce development concept',
+      featuredProjectsTitle: 'Featured Projects',
       featuredProjectsDescription:
-        "Here are some of the projects I've recently worked on. Feel free to explore!",
+        'Large-scale e-commerce projects with Salesforce Commerce Cloud, including multisite architecture, payment integrations and performance optimizations.',
       projectCardViewProject: 'View Project',
       projectCardViewCode: 'View Code',
       imageNotAvailable: 'Image not available for now',
@@ -311,12 +315,12 @@ export const ui = {
         'Explore the expertise and abilities that define my work and passion.',
     },
     blogPage: {
-      pageTitle: 'My Technical Blog',
+      pageTitle: "Daniel's Technical Blog",
       pageDescription:
-        'Articles and thoughts on web development, software architecture, and new technologies.',
-      title: 'My Technical Blog',
+        'Articles on Salesforce Commerce Cloud, e-commerce architecture, CI/CD best practices and technical decisions in scalable platforms.',
+      title: 'Technical Blog',
       description:
-        'Articles and thoughts on web development, software architecture, and new technologies.',
+        'Articles on Salesforce Commerce Cloud, e-commerce architecture, CI/CD best practices and technical decisions in scalable platforms.',
       comingSoon: 'Blog posts will appear here soon. Check back later!',
       heroImageAlt: 'Hero image for article: ',
       publishedOn: 'Published on: ',
@@ -342,13 +346,13 @@ export const ui = {
       title: 'Table of Contents',
     },
     contactPage: {
-      pageTitle: 'Contact Me',
+      pageTitle: 'Contact Daniel',
       pageDescription:
-        "Let's discuss your project, a potential collaboration, or just chat about tech!",
+        'Let\'s talk about your e-commerce project, SFCC architecture, collaboration opportunities or technology insights.',
 
-      title: 'Contact Me',
+      title: 'Get In Touch',
       description:
-        "Let's discuss your project, a potential collaboration, or just chat about tech!",
+        'Available to discuss Salesforce Commerce Cloud projects, scalable architecture, complex integrations and collaboration opportunities.',
       formTitle: 'Send a message',
       firstNameLabel: 'First Name',
       lastNameLabel: 'Last Name',
@@ -387,8 +391,8 @@ export const ui = {
     },
     projectsPage: {
       title: 'My Projects',
-      metaTitle: "My Projects | YOUR_NAME's Portfolio",
-      metaDescription: "Discover all of YOUR_NAME's projects.",
+      metaTitle: "Daniel's Projects | Salesforce Commerce Cloud",
+      metaDescription: 'E-commerce projects with Salesforce Commerce Cloud, integrations and scalable architectures.',
       noProjects: 'No projects to display at the moment.',
       noProjectsDescription:
         "It seems that you don't have any projects to display at the moment.",
@@ -402,12 +406,12 @@ export const ui = {
     },
 
     tipsPage: {
-      metaTitle: 'Development Tips | YOUR_NAME',
+      metaTitle: 'SFCC & E-commerce Tips',
       metaDescription:
-        'Browse a collection of quick tips and advice on Web Development and Cloud Computing.',
-      title: 'Latest Tips',
+        'Quick tips and advice on Salesforce Commerce Cloud, e-commerce architecture, CI/CD and performance optimization.',
       description:
-        'Browse a collection of quick tips and advice on Web Development and Cloud Computing.',
+        'Quick tips and advice on Salesforce Commerce Cloud, e-commerce architecture, CI/CD and performance optimization.',
+      title: 'Latest Tips',
       noTips: 'No tips to display at the moment.',
       readTip: 'Read tip',
       backToList: 'Back to list',

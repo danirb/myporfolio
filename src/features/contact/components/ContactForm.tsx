@@ -43,7 +43,6 @@ export function ContactForm({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       firstName: '',
-      lastName: '',
       email: '',
       message: '',
     },
@@ -109,22 +108,7 @@ export function ContactForm({
               </FormItem>
             )}
           />
-          <FormField
-            control={form.control}
-            name="lastName"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{formTranslations.lastNameLabel}</FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder={formTranslations.lastNamePlaceholder}
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+        
         </div>
         <FormField
           control={form.control}
