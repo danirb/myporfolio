@@ -13,6 +13,10 @@ import {
   Database,
   PenTool,
   Network,
+  ShoppingCart,
+  Code2,
+  Smartphone,
+  GitBranch,
   type LucideIcon,
 } from 'lucide-react';
 import type { IconType } from 'react-icons';
@@ -53,6 +57,10 @@ const iconComponents: Record<string, LucideIcon> = {
   Database,
   PenTool,
   Network,
+  ShoppingCart,
+  Code2,
+  Smartphone,
+  GitBranch,
 };
 
 // Mapping for react-icons (specific technologies)
@@ -85,7 +93,7 @@ const techIconComponents: Record<string, IconType> = {
   amazonservices: SiAmazon,
 };
 
-import type { Technology } from '@/data/skills'; // Import the Technology type
+import type { Technology } from '@/features/projects/type';
 
 export type Props = {
   title: string;

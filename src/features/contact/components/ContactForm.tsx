@@ -14,6 +14,13 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import {
   type ContactFormValues,
   type ContactFormTranslations,
   contactFormSchema,
@@ -45,6 +52,7 @@ export function ContactForm({
       firstName: '',
       lastName: '',
       email: '',
+      subject: '',
       message: '',
     },
     mode: 'onBlur',
@@ -73,11 +81,9 @@ export function ContactForm({
         }
       } else if (result.status === 'error') {
         console.error('Form submission error:', result);
-        // Attempt to display server-side validation errors if available
         let errorMessage =
           result.message || formTranslations.toastErrorFailedToSend;
         if (result.errors) {
-          // Example: Concatenate all error messages (you might want a more sophisticated display)
           const errorMessages = Object.values(result.errors).flat().join('\n');
           errorMessage += `\n\n${formTranslations.toastErrorDetails}\n${errorMessages}`;
         }
@@ -139,6 +145,39 @@ export function ContactForm({
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{formTranslations.subjectLabel}</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue
+                      placeholder={formTranslations.subjectPlaceholder}
+                    />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="job">
+                    {formTranslations.subjectOptionJob}
+                  </SelectItem>
+                  <SelectItem value="collaboration">
+                    {formTranslations.subjectOptionCollaboration}
+                  </SelectItem>
+                  <SelectItem value="consulting">
+                    {formTranslations.subjectOptionConsulting}
+                  </SelectItem>
+                  <SelectItem value="other">
+                    {formTranslations.subjectOptionOther}
+                  </SelectItem>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}

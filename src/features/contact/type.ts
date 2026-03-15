@@ -4,6 +4,12 @@ export type ContactFormTranslations = {
   firstNameLabel: string;
   lastNameLabel: string;
   emailLabel: string;
+  subjectLabel: string;
+  subjectPlaceholder: string;
+  subjectOptionJob: string;
+  subjectOptionCollaboration: string;
+  subjectOptionConsulting: string;
+  subjectOptionOther: string;
   messageLabel: string;
   firstNamePlaceholder: string;
   lastNamePlaceholder: string;
@@ -28,6 +34,7 @@ export const contactFormSchema = z.object({
   firstName: stringFieldSchema(),
   lastName: stringFieldSchema(),
   email: z.string().nonempty().email(),
+  subject: z.string().optional(),
   message: stringFieldSchema(10, 500),
 });
 
