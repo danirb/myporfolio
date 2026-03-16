@@ -12,55 +12,55 @@ export const ui = {
     projectsContent: {
       sampleProject: {
         title: 'Proyecto de Ejemplo',
-        description: 'Este es un proyecto de ejemplo del portfolio.',
-        imageAltText: 'Imagen de ejemplo del proyecto',
+        description: "Este es un proyecto de ejemplo para el template.",
+        imageAltText: "Imagen de marcador de posición para el proyecto de ejemplo",
         categoryText: 'Aplicación Web',
         dateText: 'Enero 2025',
         detailedDescription:
-          'Descripción detallada de este proyecto de ejemplo, mostrando cómo estructurar el contenido para la página de detalle.',
+          "Una descripción más detallada de este proyecto de ejemplo, mostrando cómo estructurar el contenido para la página de detalle del proyecto.",
         keyFeatures: {
           responsiveDesign: {
-            title: 'Diseño Adaptativo',
-            description: 'El proyecto se adapta a todos los tamaños de pantalla.',
+            title: 'Diseño Responsivo',
+            description: "El proyecto se adapta a todos los tamaños de pantalla.",
           },
           contentManagement: {
-            title: 'Gestión de Contenido',
+            title: 'Gestión de Contenido Fácil',
             description:
-              'Permite gestionar el contenido fácilmente mediante archivos Markdown o un CMS.',
+              'Permite una gestión fácil del contenido a través de archivos Markdown o un CMS.',
           },
         },
         galleryImages: {},
         challenges:
-          'Descripción de los retos encontrados durante el desarrollo de este proyecto.',
-        learnings: 'Descripción de los aprendizajes obtenidos en este proyecto.',
+          'Descripción de los desafíos encontrados al crear este proyecto de ejemplo.',
+        learnings: 'Descripción de los aprendizajes del proyecto de ejemplo.',
       },
     },
     skillsContent: {
-      sfccEcommerce: {
-        title: 'Salesforce Commerce Cloud',
+      sfccDevelopment: {
+        title: 'Salesforce Commerce Cloud (SFCC)',
         description:
-          'Arquitectura SFRA multisite, integración OCAPI/SCAPI, Page Designer, pipelines y CI/CD para eCommerce internacional.',
+          'Arquitectura SFRA, OCAPI/REST, pasarelas de pago (Adyen, PayPal), y plataformas multisite escalables.',
       },
-      javascriptNode: {
-        title: 'JavaScript / Node.js',
+      architectureDesign: {
+        title: 'Diseño de Arquitectura',
         description:
-          'Desarrollo frontend y backend con JS ES6+, TypeScript, Node.js, HTML5, CSS3 y SASS aplicando patrones MVC.',
+          'Decisiones técnicas end-to-end, integraciones complejas, performance y seguridad en sistemas de e-commerce.',
       },
-      mobileAndroid: {
-        title: 'Desarrollo Android',
+      cicdAutomation: {
+        title: 'CI/CD y DevOps',
         description:
-          '5 años desarrollando apps nativas con Kotlin y Java para smartphones, tablets y Android TV, publicadas en Google Play.',
+          'Diseño y automatización de pipelines, reducción de time-to-market, deployments seguros y monitoreo en producción.',
       },
-      testingDevops: {
-        title: 'Testing & DevOps',
+      requirementsAnalysis: {
+        title: 'Análisis de Requisitos',
         description:
-          'Cobertura ~100% con Mocha, Chai, Sinon y Proxyquire. Pipelines CI/CD, Git, Scrum y JIRA en equipos distribuidos.',
+          'Toma de requisitos con negocio, traducción técnico-funcional, coordinación con proveedores y equipos ágiles remotos.',
       },
     },
     site: {
-      title: 'Daniel Redondo | SFCC Developer',
+      title: 'Daniel Redondo Blanco | Desarrollador SFCC Senior',
       description:
-        'Portfolio de Daniel Redondo Blanco, Salesforce Commerce Cloud Developer certificado con 10 años de experiencia en IT.',
+        'Desarrollador Senior de Salesforce Commerce Cloud con más de 5 años diseñando soluciones e-commerce escalables y arquitecturas robustas.',
     },
     nav: {
       home: 'Inicio',
@@ -73,42 +73,43 @@ export const ui = {
       rights: 'Todos los derechos reservados.',
     },
     homePage: {
-      pageTitle: 'Inicio | Daniel Redondo - SFCC Developer',
+      pageTitle: 'Inicio | Daniel Redondo Blanco - Desarrollador SFCC Senior',
       pageDescription:
-        'Portfolio de Daniel Redondo Blanco, Salesforce Commerce Cloud Developer certificado con 5+ años en SFCC y 10 años en IT.',
-      heroGreeting: 'Hola, soy Daniel',
-      heroSubtitlePart1: 'Salesforce Commerce Cloud Developer',
-      heroSubtitlePart2: 'Certificado · 10 años en IT',
-      heroIntroduction:
-        'Desarrollador SFCC B2C certificado especializado en arquitectura SFRA multisite, integraciones REST/OCAPI/SCAPI y CI/CD. He liderado proyectos eCommerce de alto impacto para Tennis-Point, UNOde50 y Parfois. Disponible para trabajo remoto.',
-      heroViewWorkButton: 'Ver mis proyectos',
+        'Desarrollador Senior de Salesforce Commerce Cloud con más de 5 años diseñando soluciones e-commerce escalables, arquitecturas robustas e integraciones complejas.',
+      heroGreeting: 'Soy Daniel Redondo Blanco',
+      heroSubtitlePart1: 'Desarrollador SFCC Senior',
+      heroSubtitlePart2: 'Especializado en e-commerce',
+      heroIntroduction: 'Especialista en Salesforce Commerce Cloud con más de 5 años diseñando y manteniendo plataformas e-commerce escalables. Experto en SFRA, OCAPI/REST, CI/CD y decisiones técnicas enfocadas en performance y seguridad.',
+      heroViewWorkButton: 'Ver Mi Trabajo',
       heroContactButton: 'Contactar',
-      heroImageAlt: 'Ilustración representando a Daniel Redondo, desarrollador',
-      featuredProjectsTitle: 'Últimos proyectos',
+      heroImageAlt:
+        'Ilustración representando a Daniel Redondo Blanco y concepto de desarrollo e-commerce',
+      featuredProjectsTitle: 'Proyectos Destacados',
       featuredProjectsDescription:
-        'Algunos proyectos en los que he trabajado recientemente. ¡Explóralos!',
-      projectCardViewProject: 'Ver proyecto',
-      projectCardViewCode: 'Ver código',
-      imageNotAvailable: 'Imagen próximamente',
+        'Proyectos de e-commerce a gran escala con Salesforce Commerce Cloud, incluyendo arquitectura multisite, integraciones de pagos y optimizaciones de performance.',
+      projectCardViewProject: 'Ver Proyecto',
+      projectCardViewCode: 'Ver Código',
+      imageNotAvailable: 'Imagen no disponible aún',
       mySkillsTitle: 'Mis Habilidades',
       mySkillsDescription:
-        'Más de 10 años de experiencia en IT, especializándome en Salesforce Commerce Cloud, desarrollo JavaScript y Android nativo.',
+        "Explora la experiencia y las capacidades que definen mi trabajo y mi pasión.",
     },
     blogPage: {
-      pageTitle: 'Blog Técnico | Daniel Redondo',
+      pageTitle: 'Blog Técnico de Daniel',
       pageDescription:
-        'Artículos y reflexiones sobre desarrollo eCommerce, Salesforce Commerce Cloud, JavaScript y arquitectura de software.',
+        'Artículos sobre Salesforce Commerce Cloud, arquitectura de e-commerce, mejores prácticas en CI/CD y decisiones técnicas en plataformas escalables.',
       title: 'Blog Técnico',
       description:
-        'Artículos y reflexiones sobre desarrollo eCommerce, Salesforce Commerce Cloud, JavaScript y arquitectura de software.',
-      comingSoon: 'Los artículos aparecerán aquí pronto. ¡Vuelve más tarde!',
-      heroImageAlt: 'Imagen de portada del artículo: ',
+        'Artículos sobre Salesforce Commerce Cloud, arquitectura de e-commerce, mejores prácticas en CI/CD y decisiones técnicas en plataformas escalables.',
+      comingSoon:
+        'Los artículos del blog aparecerán pronto. ¡Vuelve más tarde!',
+      heroImageAlt: "Imagen de portada del artículo: ",
       publishedOn: 'Publicado el: ',
       readMore: 'Leer más',
       readingTimeSuffix: 'min de lectura',
       searchPlaceholder: 'Buscar artículos...',
       filterByTagButtonLabel: 'Filtrar por etiqueta',
-      noTagFound: 'No se encontró ninguna etiqueta.',
+      noTagFound: 'Ninguna etiqueta encontrada.',
       selectTagCommandPlaceholder: 'Buscar etiqueta...',
       allTagsLabel: 'Todas las etiquetas',
       noPostsFound: 'No se encontraron artículos.',
@@ -116,23 +117,23 @@ export const ui = {
     blogPost: {
       publishedOn: 'Publicado el: ',
       updatedOn: 'Actualizado el: ',
-      heroImageAlt: 'Imagen de portada del artículo: ',
-      backToList: 'Volver al listado',
+      heroImageAlt: "Imagen de portada del artículo: ",
+      backToList: 'Volver a la lista de artículos',
       readingTimeSuffix: 'min de lectura',
       relatedPostsTitle: 'También te recomiendo:',
       readMore: 'Leer más',
-      editOnGithub: 'Proponer cambios en GitHub',
+      editOnGithub: 'Proponer una modificación en GitHub',
     },
     toc: {
-      title: 'Índice del artículo',
+      title: "Tabla de contenidos del artículo",
     },
     contactPage: {
-      pageTitle: 'Contactar | Daniel Redondo',
+      pageTitle: 'Contactar a Daniel',
       pageDescription:
-        '¿Tienes una oportunidad SFCC, una colaboración o una consulta técnica? Escríbeme.',
-      title: 'Contactar',
+        'Hablemos sobre tu proyecto de e-commerce, oportunidades de colaboración o simplemente para intercambiar ideas sobre tecnología y arquitectura SFCC.',
+      title: 'Contacta Conmigo',
       description:
-        '¿Tienes una oportunidad SFCC, una colaboración o una consulta técnica? Escríbeme, respondo en menos de 24h.',
+        'Disponible para discutir proyectos de Salesforce Commerce Cloud, arquitectura escalable, integraciones complejas y oportunidades de colaboración.',
 
       formTitle: 'Enviar un mensaje',
       firstNameLabel: 'Nombre',
@@ -148,45 +149,47 @@ export const ui = {
       sendButtonLabel: 'Enviar',
       firstNamePlaceholder: 'Tu nombre',
       lastNamePlaceholder: 'Tu apellido',
-      emailPlaceholder: 'tu@email.com',
-      messagePlaceholder: 'Escribe tu mensaje aquí...',
-      calendarTitle: 'Agendar una llamada',
+      emailPlaceholder: 'Tu correo electrónico',
+      messagePlaceholder: 'Tu mensaje aquí...',
+      calendarTitle: 'Agendar una cita',
       calendarDescription:
-        '¿Prefieres hablar directamente? Reserva un hueco en mi calendario.',
-      calendarButtonLabel: 'Ver disponibilidad',
-      calendarLinkLabel: 'Ver mi agenda',
-      calendarPlaceHolder: 'Integración con Google Calendar próximamente...',
+        '¿Prefieres hablar directamente? Reserva un espacio en mi calendario.',
+      calendarButtonLabel: 'Ver mi disponibilidad',
+      calendarLinkLabel: 'Ver mi calendario',
+      calendarPlaceHolder:
+        "La integración con Google Calendar estará disponible pronto...",
       orSeparatorText: 'O',
-      toastSuccessMessageSent: '¡Mensaje enviado con éxito!',
-      toastErrorFailedToSend: 'Error al enviar el mensaje.',
-      toastErrorUnexpected: 'Ha ocurrido un error inesperado.',
-      toastErrorDetails: 'Detalles del error:',
-      toastErrorValidationFailed: 'Error de validación del formulario.',
+      toastSuccessMessageSent: '¡Mensaje enviado exitosamente!',
+      toastErrorFailedToSend: "Error al enviar el mensaje.",
+      toastErrorUnexpected: "Ocurrió un error inesperado.",
+      toastErrorDetails: "Detalles del error:",
+      toastErrorValidationFailed: 'La validación del formulario falló.',
     },
     projectDetailPage: {
       backToProjects: 'Volver a Proyectos',
       categoryLabel: 'Categoría:',
       dateLabel: 'Fecha:',
-      aboutTitle: 'Sobre este proyecto',
-      keyFeaturesTitle: 'Funcionalidades Clave',
+      aboutTitle: 'Acerca de este proyecto',
+      keyFeaturesTitle: 'Características Principales',
       galleryTitle: 'Galería',
-      challengesTitle: 'Retos Encontrados',
-      learningsTitle: 'Aprendizajes',
+      challengesTitle: 'Desafíos Encontrados',
+      learningsTitle: 'Lecciones Aprendidas',
       visitProjectButton: 'Visitar Proyecto',
       viewCodeButton: 'Ver Código',
     },
     projectsPage: {
       title: 'Mis Proyectos',
-      metaTitle: 'Proyectos | Daniel Redondo',
-      metaDescription: 'Proyectos desarrollados por Daniel Redondo Blanco.',
-      noProjects: 'No hay proyectos que mostrar por ahora.',
-      noProjectsDescription: 'Próximamente se añadirán proyectos.',
+      metaTitle: 'Proyectos de Daniel | Salesforce Commerce Cloud',
+      metaDescription: 'Proyectos de e-commerce con Salesforce Commerce Cloud, integraciones y arquitecturas escalables.',
+      noProjects: 'No hay proyectos para mostrar en este momento.',
+      noProjectsDescription:
+        "Parece que aún no tienes proyectos para mostrar.",
     },
     notFoundPage: {
       pageTitle: 'Página No Encontrada',
-      title: '¡Ups! Página No Encontrada',
+      title: '¡Oops! Página No Encontrada',
       message:
-        'Lo sentimos, la página que buscas no parece existir. Comprueba la URL o vuelve a la página de inicio.',
+        'La página que buscas no existe. Verifica la URL o regresa al inicio.',
       homeLink: 'Volver al Inicio',
     },
     tipsPage: {
@@ -244,57 +247,56 @@ export const ui = {
       },
     },
     skillsContent: {
-      sfccEcommerce: {
-        title: 'Salesforce Commerce Cloud',
+      sfccDevelopment: {
+        title: 'Salesforce Commerce Cloud (SFCC)',
         description:
-          'Multisite SFRA architecture, OCAPI/SCAPI integrations, Page Designer, pipelines and CI/CD for international eCommerce.',
+          'SFRA architecture, OCAPI/REST, payment gateways (Adyen, PayPal), and scalable multisite platforms.',
       },
-      javascriptNode: {
-        title: 'JavaScript / Node.js',
+      architectureDesign: {
+        title: 'Architecture Design',
         description:
-          'Frontend and backend development with JS ES6+, TypeScript, Node.js, HTML5, CSS3 and SASS applying MVC patterns.',
+          'End-to-end technical decisions, complex integrations, performance and security in e-commerce systems.',
       },
-      mobileAndroid: {
-        title: 'Android Development',
+      cicdAutomation: {
+        title: 'CI/CD & DevOps',
         description:
-          '5 years building native apps with Kotlin and Java for smartphones, tablets and Android TV, published on Google Play.',
+          'Pipeline design and automation, time-to-market reduction, secure deployments and production monitoring.',
       },
-      testingDevops: {
-        title: 'Testing & DevOps',
+      requirementsAnalysis: {
+        title: 'Requirements Analysis',
         description:
-          '~100% coverage with Mocha, Chai, Sinon and Proxyquire. CI/CD pipelines, Git, Scrum and JIRA in distributed teams.',
+          'Requirement gathering with business teams, technical-functional translation, vendor coordination and remote agile teams.',
       },
     },
     site: {
-      title: 'Daniel Redondo | SFCC Developer',
+      title: 'Daniel Redondo Blanco | Senior SFCC Developer',
       description:
-        'Portfolio of Daniel Redondo Blanco, certified Salesforce Commerce Cloud Developer with 10 years of IT experience.',
+        'Senior Salesforce Commerce Cloud developer with 5+ years designing scalable e-commerce solutions and robust architectures.',
     },
     nav: {
       home: 'Home',
       blog: 'Blog',
       contact: 'Contact',
       projects: 'Projects',
-      tips: 'Tips',
     },
     footer: {
       rights: 'All rights reserved.',
     },
     homePage: {
-      pageTitle: 'Home | Daniel Redondo - SFCC Developer',
+      pageTitle: 'Home | Daniel Redondo Blanco - Senior SFCC Developer',
       pageDescription:
-        'Portfolio of Daniel Redondo Blanco, certified Salesforce Commerce Cloud Developer with 5+ years in SFCC and 10 years in IT.',
-      heroGreeting: "Hi, I'm Daniel",
-      heroSubtitlePart1: 'Salesforce Commerce Cloud Developer',
-      heroSubtitlePart2: 'Certified · 10 years in IT',
-      heroIntroduction:
-        'Certified SFCC B2C Developer specialised in multisite SFRA architecture, REST/OCAPI/SCAPI integrations and CI/CD. I have led high-impact eCommerce projects for Tennis-Point, UNOde50 and Parfois. Available for remote work.',
-      heroViewWorkButton: 'View My Projects',
+        'Senior Salesforce Commerce Cloud developer with 5+ years designing scalable e-commerce solutions, robust architectures and complex integrations.',
+      heroGreeting: "Hi, I'm Daniel Redondo Blanco",
+      heroSubtitlePart1: 'Senior SFCC Developer',
+      heroSubtitlePart2: 'E-commerce Specialist',
+      heroIntroduction: 'Specialized in Salesforce Commerce Cloud with 5+ years designing and maintaining scalable e-commerce platforms. Expert in SFRA, OCAPI/REST, CI/CD and technical decisions focused on performance and security.',
+      heroViewWorkButton: 'View My Work',
       heroContactButton: 'Get In Touch',
-      heroImageAlt: 'Illustration representing Daniel Redondo, developer',
-      featuredProjectsTitle: 'Latest Projects',
+      heroImageAlt:
+        'Illustration representing Daniel Redondo Blanco and e-commerce development concept',
+      featuredProjectsTitle: 'Featured Projects',
       featuredProjectsDescription:
-        "Here are some of the projects I've recently worked on. Feel free to explore!",
+        'Large-scale e-commerce projects with Salesforce Commerce Cloud, including multisite architecture, payment integrations and performance optimizations.',
       projectCardViewProject: 'View Project',
       projectCardViewCode: 'View Code',
       imageNotAvailable: 'Image coming soon',
@@ -303,12 +305,12 @@ export const ui = {
         'Over 10 years of IT experience, specialising in Salesforce Commerce Cloud, JavaScript development and native Android.',
     },
     blogPage: {
-      pageTitle: 'Technical Blog | Daniel Redondo',
+      pageTitle: "Daniel's Technical Blog",
       pageDescription:
-        'Articles and thoughts on eCommerce development, Salesforce Commerce Cloud, JavaScript and software architecture.',
+        'Articles on Salesforce Commerce Cloud, e-commerce architecture, CI/CD best practices and technical decisions in scalable platforms.',
       title: 'Technical Blog',
       description:
-        'Articles and thoughts on eCommerce development, Salesforce Commerce Cloud, JavaScript and software architecture.',
+        'Articles on Salesforce Commerce Cloud, e-commerce architecture, CI/CD best practices and technical decisions in scalable platforms.',
       comingSoon: 'Blog posts will appear here soon. Check back later!',
       heroImageAlt: 'Hero image for article: ',
       publishedOn: 'Published on: ',
@@ -335,12 +337,12 @@ export const ui = {
       title: 'Table of Contents',
     },
     contactPage: {
-      pageTitle: 'Contact | Daniel Redondo',
+      pageTitle: 'Contact Daniel',
       pageDescription:
-        'Got a SFCC opportunity, a collaboration or a technical question? Write to me.',
-      title: 'Contact',
+        'Let\'s talk about your e-commerce project, SFCC architecture, collaboration opportunities or technology insights.',
+      title: 'Get In Touch',
       description:
-        'Got a SFCC opportunity, a collaboration or a technical question? Write to me — I reply within 24h.',
+        'Available to discuss Salesforce Commerce Cloud projects, scalable architecture, complex integrations and collaboration opportunities.',
       formTitle: 'Send a message',
       firstNameLabel: 'First Name',
       lastNameLabel: 'Last Name',
@@ -384,8 +386,8 @@ export const ui = {
     },
     projectsPage: {
       title: 'My Projects',
-      metaTitle: "Projects | Daniel Redondo's Portfolio",
-      metaDescription: "Projects developed by Daniel Redondo Blanco.",
+      metaTitle: "Daniel's Projects | Salesforce Commerce Cloud",
+      metaDescription: 'E-commerce projects with Salesforce Commerce Cloud, integrations and scalable architectures.',
       noProjects: 'No projects to display at the moment.',
       noProjectsDescription: 'Projects will be added soon.',
     },
