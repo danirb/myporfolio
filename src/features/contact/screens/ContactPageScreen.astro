@@ -3,7 +3,7 @@ import Heading from '@/components/Heading.astro';
 import { buttonVariants } from '@/components/ui/button';
 import type { LanguageCode } from '@/i18n/ui';
 import { cn } from '@/lib/utils';
-import { Calendar } from 'lucide-react';
+import { Calendar, Mail, Phone, Linkedin } from 'lucide-react';
 
 import { ContactForm } from '../components/ContactForm.tsx';
 import type { ContactFormTranslations } from '../type';
@@ -44,13 +44,42 @@ const {
     titleClassName="md:text-5xl"
   />
 
-  <div class="flex justify-center mt-12">
+  <!-- Direct contact info -->
+  <div class="flex justify-center mt-8">
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a
+        href="mailto:danielredondoblanco@gmail.com"
+        class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <Mail class="size-4" />
+        danielredondoblanco@gmail.com
+      </a>
+      <a
+        href="tel:+34644359089"
+        class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <Phone class="size-4" />
+        +34 644 359 089
+      </a>
+      <a
+        href="https://linkedin.com/in/danielredondoblanco"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <Linkedin class="size-4" />
+        linkedin.com/in/danielredondoblanco
+      </a>
+    </div>
+  </div>
+
+  <div class="flex justify-center mt-10">
     <div class="w-full max-w-xl space-y-6 bg-card p-6 md:p-8 rounded-lg shadow">
-      {/* Section Formulaire */}
+      <!-- Form section -->
       <Heading title={formTitle} className="text-center" />
       <ContactForm client:load {lang} {formTranslations} />
 
-      {/* Séparateur OU */}
+      <!-- OR separator -->
       <div class="my-8 flex items-center">
         <hr class="flex-grow border-border" />
         <span class="mx-4 text-muted-foreground font-medium"
@@ -59,7 +88,7 @@ const {
         <hr class="flex-grow border-border" />
       </div>
 
-      {/* Section Google Calendar */}
+      <!-- Calendar section -->
       <Heading
         title={calendarTitle}
         className="text-center"

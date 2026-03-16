@@ -29,12 +29,7 @@ export const ui = {
               'Permite una gestión fácil del contenido a través de archivos Markdown o un CMS.',
           },
         },
-        galleryImages: {
-          // sampleGalleryImage1: { // Si activas la galería para el ejemplo
-          //   alt: "Texto alternativo para la imagen de galería 1",
-          //   caption: "Leyenda para la imagen de galería 1",
-          // },
-        },
+        galleryImages: {},
         challenges:
           'Descripción de los desafíos encontrados al crear este proyecto de ejemplo.',
         learnings: 'Descripción de los aprendizajes del proyecto de ejemplo.',
@@ -71,7 +66,8 @@ export const ui = {
       home: 'Inicio',
       blog: 'Blog',
       contact: 'Contacto',
-      projects: 'Proyectos'
+      projects: 'Proyectos',
+      tips: 'Consejos',
     },
     footer: {
       rights: 'Todos los derechos reservados.',
@@ -143,10 +139,15 @@ export const ui = {
       firstNameLabel: 'Nombre',
       lastNameLabel: 'Apellido',
       emailLabel: 'Email',
+      subjectLabel: 'Asunto',
+      subjectPlaceholder: 'Selecciona el motivo de tu mensaje',
+      subjectOptionJob: 'Oportunidad laboral',
+      subjectOptionCollaboration: 'Colaboración',
+      subjectOptionConsulting: 'Consulta técnica',
+      subjectOptionOther: 'Otro',
       messageLabel: 'Mensaje',
       sendButtonLabel: 'Enviar',
       firstNamePlaceholder: 'Tu nombre',
-
       lastNamePlaceholder: 'Tu apellido',
       emailPlaceholder: 'Tu correo electrónico',
       messagePlaceholder: 'Tu mensaje aquí...',
@@ -191,26 +192,38 @@ export const ui = {
         'La página que buscas no existe. Verifica la URL o regresa al inicio.',
       homeLink: 'Volver al Inicio',
     },
-
+    tipsPage: {
+      metaTitle: 'Consejos de Desarrollo | Daniel Redondo',
+      metaDescription:
+        'Consejos rápidos sobre Salesforce Commerce Cloud, desarrollo web y automatización.',
+      description:
+        'Consejos rápidos sobre Salesforce Commerce Cloud, desarrollo web y automatización.',
+      title: 'Últimos Consejos',
+      noTips: 'No hay consejos que mostrar por ahora.',
+      readTip: 'Leer consejo',
+      backToList: 'Volver al listado',
+      featuredTips: 'Consejos destacados',
+      allTips: 'Todos los consejos',
+      tipsAvailable: 'consejos disponibles',
+      tipAvailable: 'consejo disponible',
+      editOnGithub: 'Editar en GitHub',
+    },
     zodErrors: {
-      // Common errors
       invalid_type: 'Tipo inválido.',
-      invalid_type_received_undefined: 'Este campo es obligatorio.', // For required fields (fallback)
+      invalid_type_received_undefined: 'Este campo es obligatorio.',
       required_field_custom: 'El campo {fieldName} es obligatorio.',
-      // String errors
-      too_small_string_minimum: 'Debe contener al menos {minimum} caracteres.',
-      too_big_string_maximum: 'No debe exceder {maximum} caracteres.',
-      invalid_string_email: 'Correo electrónico inválido.',
+      too_small_string_minimum: 'Debe tener al menos {minimum} caracteres.',
+      too_big_string_maximum: 'No debe superar {maximum} caracteres.',
+      invalid_string_email: 'Dirección de email inválida.',
       invalid_string_url: 'URL inválida.',
       invalid_string_uuid: 'UUID inválido.',
-      // You can add more specific messages as needed
     },
   },
   en: {
     projectsContent: {
       sampleProject: {
         title: 'Sample Project',
-        description: 'This is a sample project for the template.',
+        description: 'This is a sample project for the portfolio.',
         imageAltText: 'Placeholder image for the sample project',
         categoryText: 'Web Application',
         dateText: 'January 2025',
@@ -227,12 +240,7 @@ export const ui = {
               'Allows for easy content management via Markdown files or a CMS.',
           },
         },
-        galleryImages: {
-          // sampleGalleryImage1: { // If you enable gallery for the example
-          //   alt: 'Alt text for gallery image 1',
-          //   caption: 'Caption for gallery image 1',
-          // },
-        },
+        galleryImages: {},
         challenges:
           'Description of challenges encountered while creating this sample project.',
         learnings: 'Description of learnings from this sample project.',
@@ -291,10 +299,10 @@ export const ui = {
         'Large-scale e-commerce projects with Salesforce Commerce Cloud, including multisite architecture, payment integrations and performance optimizations.',
       projectCardViewProject: 'View Project',
       projectCardViewCode: 'View Code',
-      imageNotAvailable: 'Image not available for now',
+      imageNotAvailable: 'Image coming soon',
       mySkillsTitle: 'My Skills',
       mySkillsDescription:
-        'Explore the expertise and abilities that define my work and passion.',
+        'Over 10 years of IT experience, specialising in Salesforce Commerce Cloud, JavaScript development and native Android.',
     },
     blogPage: {
       pageTitle: "Daniel's Technical Blog",
@@ -323,6 +331,7 @@ export const ui = {
       readingTimeSuffix: 'min read',
       relatedPostsTitle: 'Continue Reading',
       readMore: 'Read more',
+      editOnGithub: 'Suggest changes on GitHub',
     },
     toc: {
       title: 'Table of Contents',
@@ -331,7 +340,6 @@ export const ui = {
       pageTitle: 'Contact Daniel',
       pageDescription:
         'Let\'s talk about your e-commerce project, SFCC architecture, collaboration opportunities or technology insights.',
-
       title: 'Get In Touch',
       description:
         'Available to discuss Salesforce Commerce Cloud projects, scalable architecture, complex integrations and collaboration opportunities.',
@@ -339,19 +347,24 @@ export const ui = {
       firstNameLabel: 'First Name',
       lastNameLabel: 'Last Name',
       emailLabel: 'Email',
+      subjectLabel: 'Subject',
+      subjectPlaceholder: 'Select the reason for your message',
+      subjectOptionJob: 'Job opportunity',
+      subjectOptionCollaboration: 'Collaboration',
+      subjectOptionConsulting: 'Technical consulting',
+      subjectOptionOther: 'Other',
       messageLabel: 'Message',
       sendButtonLabel: 'Send',
       firstNamePlaceholder: 'Your first name',
       lastNamePlaceholder: 'Your last name',
-      emailPlaceholder: 'Your email address',
-      messagePlaceholder: 'Your message here...',
-      calendarTitle: 'Schedule a Meeting',
+      emailPlaceholder: 'your@email.com',
+      messagePlaceholder: 'Write your message here...',
+      calendarTitle: 'Schedule a Call',
       calendarDescription:
-        'Prefer to talk live? Book a slot directly in my calendar.',
+        'Prefer to talk directly? Book a slot in my calendar.',
       calendarButtonLabel: 'See my availability',
       calendarLinkLabel: 'See my calendar',
-      calendarPlaceHolder:
-        'The integration with Google Calendar will be soon...',
+      calendarPlaceHolder: 'Google Calendar integration coming soon...',
       orSeparatorText: 'OR',
       toastSuccessMessageSent: 'Message sent successfully!',
       toastErrorFailedToSend: 'Failed to send message.',
@@ -376,8 +389,7 @@ export const ui = {
       metaTitle: "Daniel's Projects | Salesforce Commerce Cloud",
       metaDescription: 'E-commerce projects with Salesforce Commerce Cloud, integrations and scalable architectures.',
       noProjects: 'No projects to display at the moment.',
-      noProjectsDescription:
-        "It seems that you don't have any projects to display at the moment.",
+      noProjectsDescription: 'Projects will be added soon.',
     },
     notFoundPage: {
       pageTitle: 'Page Not Found',
@@ -386,19 +398,31 @@ export const ui = {
         'Sorry, the page you are looking for does not seem to exist. Check the URL or return to the homepage.',
       homeLink: 'Return to Homepage',
     },
-
+    tipsPage: {
+      metaTitle: 'Dev Tips | Daniel Redondo',
+      metaDescription:
+        'Quick tips on Salesforce Commerce Cloud, web development and automation.',
+      title: 'Latest Tips',
+      description:
+        'Quick tips on Salesforce Commerce Cloud, web development and automation.',
+      noTips: 'No tips to display at the moment.',
+      readTip: 'Read tip',
+      backToList: 'Back to list',
+      featuredTips: 'Featured Tips',
+      allTips: 'All Tips',
+      tipsAvailable: 'tips available',
+      tipAvailable: 'tip available',
+      editOnGithub: 'Edit on GitHub',
+    },
     zodErrors: {
-      // Common errors
       invalid_type: 'Invalid type.',
-      invalid_type_received_undefined: 'This field is required.', // For required fields (fallback)
+      invalid_type_received_undefined: 'This field is required.',
       required_field_custom: 'The {fieldName} field is required.',
-      // String errors
       too_small_string_minimum: 'Must be at least {minimum} characters long.',
       too_big_string_maximum: 'Must be no more than {maximum} characters long.',
       invalid_string_email: 'Invalid email address.',
       invalid_string_url: 'Invalid URL.',
       invalid_string_uuid: 'Invalid UUID.',
-      // You can add more specific messages as needed
     },
   },
 } as const;
