@@ -5,6 +5,9 @@ const currentLocale =
   (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
 ---
 
-<a href={getRelativeLocaleUrl(currentLocale)}>
-  <span class="text-2xl font-bold text-primary"> Your Logo </span>
+<a href={getRelativeLocaleUrl(currentLocale)} class="flex items-center gap-2 group" aria-label="Daniel Redondo Blanco - Inicio">
+  <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center transition-opacity group-hover:opacity-80">
+    <span class="text-primary-foreground text-xs font-bold tracking-widest font-mono select-none">DRB</span>
+  </div>
+  <span class="text-xl font-bold text-primary tracking-wide hidden sm:inline">DRB</span>
 </a>

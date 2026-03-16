@@ -10,31 +10,145 @@ import type {
 
 const projectsListUnsorted: Array<ProjectData> = [
   {
-    id: 'sampleProject', // Unique identifier for translations
-    slug: 'sample-project', // Used in the URL
-    imageUrl: placeholderImage, // Use imported ImageMetadata
-    // projectUrl: '#', // Optional: Link to the live project
-    // codeUrl: '#', // Optional: Link to the source code
-    tags: ['Astro', 'TypeScript', 'Template'], // Generic tags
-    category: 'Web Application', // Generic category
-    date: '2025-01-01', // Generic date
-    galleryImages: [
-      // Optional: Gallery images for the project
-      // {
-      //   id: 'sampleGalleryImage1',
-      //   src: placeholderImage, // Placeholder, needs ImageMetadata
-      // },
-    ],
+    id: 'unode50',
+    slug: 'unode50',
+    imageUrl: placeholderImage,
+    tags: ['SFCC', 'SFRA', 'SCAPI', 'CI/CD', 'Adyen'],
+    category: 'SFCC / eCommerce',
+    date: '2025-08-01',
     keyFeatures: [
-      // Key features (IDs for translation)
-      { id: 'responsiveDesign' },
-      { id: 'contentManagement' },
+      { id: 'cicdAutomation' },
+      { id: 'scapiModernization' },
+      { id: 'paymentIntegrations' },
+      { id: 'sfraCartridges' },
     ],
     technologiesUsed: [
-      // Technologies used (IDs for display)
-      { id: 'astro', name: 'Astro' },
+      { id: 'sfcc', name: 'SFCC' },
+      { id: 'sfra', name: 'SFRA' },
+      { id: 'scapi', name: 'SCAPI' },
+      { id: 'adyen', name: 'Adyen' },
+      { id: 'applePay', name: 'Apple Pay' },
+      { id: 'avatax', name: 'Avatax' },
+      { id: 'gtm', name: 'GTM' },
+      { id: 'javascript', name: 'JavaScript ES6+' },
+    ],
+  },
+  {
+    id: 'jaenaprende',
+    slug: 'jaena-aprende',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://www.jaenaprende.es',
+    tags: ['Formación IT', 'Astro.js', 'Make', 'Web'],
+    category: 'Web / Educación',
+    date: '2025-06-01',
+    keyFeatures: [
+      { id: 'astroCourse' },
+      { id: 'makeCourse' },
+      { id: 'modernWebDesign' },
+    ],
+    technologiesUsed: [
+      { id: 'astro', name: 'Astro.js' },
       { id: 'typescript', name: 'TypeScript' },
       { id: 'tailwindcss', name: 'TailwindCSS' },
+    ],
+  },
+  {
+    id: 'tennisPoint',
+    slug: 'tennis-point',
+    imageUrl: placeholderImage,
+    tags: ['SFCC', 'SFRA', 'Multisite', 'CI/CD', 'Testing'],
+    category: 'SFCC / eCommerce',
+    date: '2024-08-01',
+    keyFeatures: [
+      { id: 'multisiteArchitecture' },
+      { id: 'unitTesting' },
+      { id: 'paymentGateways' },
+      { id: 'internationalTeam' },
+    ],
+    technologiesUsed: [
+      { id: 'sfcc', name: 'SFCC' },
+      { id: 'sfra', name: 'SFRA' },
+      { id: 'ocapi', name: 'OCAPI' },
+      { id: 'mocha', name: 'Mocha' },
+      { id: 'javascript', name: 'JavaScript ES6+' },
+      { id: 'sass', name: 'SASS' },
+    ],
+  },
+  {
+    id: 'aprendesk',
+    slug: 'aprendesk',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://www.aprendesk.app',
+    tags: ['SaaS', 'Gestión', 'TypeScript', 'Web App'],
+    category: 'SaaS',
+    date: '2024-03-01',
+    keyFeatures: [
+      { id: 'customManagement' },
+      { id: 'saasArchitecture' },
+      { id: 'userInterface' },
+    ],
+    technologiesUsed: [
+      { id: 'typescript', name: 'TypeScript' },
+      { id: 'nodejs', name: 'Node.js' },
+      { id: 'react', name: 'React' },
+    ],
+  },
+  {
+    id: 'rolloDesarrollo',
+    slug: 'rollo-desarrollo',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://www.rollodesarrollo.com',
+    tags: ['Podcast', 'Web', 'JavaScript'],
+    category: 'Web / Media',
+    date: '2023-06-01',
+    keyFeatures: [
+      { id: 'podcastWeb' },
+      { id: 'contentDelivery' },
+    ],
+    technologiesUsed: [
+      { id: 'javascript', name: 'JavaScript' },
+      { id: 'html5', name: 'HTML5' },
+      { id: 'css3', name: 'CSS3' },
+    ],
+  },
+  {
+    id: 'hostaletacion',
+    slug: 'hostaleta-cion-jaen',
+    imageUrl: placeholderImage,
+    projectUrl: 'https://www.hostaletacionjaen.com',
+    tags: ['Hotel', 'Web', 'Integraciones', 'Booking'],
+    category: 'Web / Turismo',
+    date: '2022-06-01',
+    keyFeatures: [
+      { id: 'bookingIntegration' },
+      { id: 'mobileOptimized' },
+      { id: 'seoLocal' },
+    ],
+    technologiesUsed: [
+      { id: 'javascript', name: 'JavaScript' },
+      { id: 'html5', name: 'HTML5' },
+      { id: 'css3', name: 'CSS3' },
+    ],
+  },
+  {
+    id: 'parfois',
+    slug: 'parfois',
+    imageUrl: placeholderImage,
+    tags: ['SFCC', 'SiteGenesis', 'OCAPI', 'Android', 'Kotlin'],
+    category: 'SFCC / eCommerce',
+    date: '2020-11-01',
+    keyFeatures: [
+      { id: 'sitegenesisEvolution' },
+      { id: 'ocapiHooks' },
+      { id: 'headlessIntegrations' },
+      { id: 'androidDev' },
+    ],
+    technologiesUsed: [
+      { id: 'sfcc', name: 'SFCC' },
+      { id: 'sitegenesis', name: 'SiteGenesis' },
+      { id: 'ocapi', name: 'OCAPI' },
+      { id: 'kotlin', name: 'Kotlin' },
+      { id: 'java', name: 'Java' },
     ],
   },
 ];
