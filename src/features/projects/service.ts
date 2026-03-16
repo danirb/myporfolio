@@ -171,37 +171,51 @@ export function getTranslatedProjectBySlug(
 // Skills
 export const skillsList: Array<SkillData> = [
   {
-    id: 'frontendDevelopment',
-    iconName: 'MonitorSmartphone',
+    id: 'sfccEcommerce',
+    iconName: 'ShoppingCart',
     technologies: [
-      { id: 'html', name: 'HTML' },
-      { id: 'css', name: 'CSS' },
-      { id: 'javascript', name: 'JavaScript' },
+      { id: 'sfra', name: 'SFRA' },
+      { id: 'sitegenesis', name: 'SiteGenesis' },
+      { id: 'ocapi', name: 'OCAPI' },
+      { id: 'scapi', name: 'SCAPI' },
+      { id: 'pageDesigner', name: 'Page Designer' },
+      { id: 'einstein', name: 'Einstein' },
+      { id: 'cicd', name: 'CI/CD' },
+    ],
+  },
+  {
+    id: 'javascriptNode',
+    iconName: 'Code2',
+    technologies: [
+      { id: 'javascript', name: 'JavaScript ES6+' },
       { id: 'typescript', name: 'TypeScript' },
-    ],
-  },
-  {
-    id: 'backendDevelopment',
-    iconName: 'ServerCog',
-    technologies: [
       { id: 'nodejs', name: 'Node.js' },
-      { id: 'restapi', name: 'REST APIs' },
+      { id: 'html5', name: 'HTML5' },
+      { id: 'css3', name: 'CSS3' },
+      { id: 'sass', name: 'SASS' },
     ],
   },
   {
-    id: 'uiUxDesign',
-    iconName: 'PenTool',
+    id: 'mobileAndroid',
+    iconName: 'Smartphone',
     technologies: [
-      { id: 'figma', name: 'Figma' },
-      { id: 'responsiveDesign', name: 'Responsive Design' },
+      { id: 'kotlin', name: 'Kotlin' },
+      { id: 'java', name: 'Java' },
+      { id: 'androidTv', name: 'Android TV' },
+      { id: 'googlePlay', name: 'Google Play' },
     ],
   },
   {
-    id: 'devOps',
-    iconName: 'Network',
+    id: 'testingDevops',
+    iconName: 'GitBranch',
     technologies: [
+      { id: 'mocha', name: 'Mocha' },
+      { id: 'chai', name: 'Chai' },
+      { id: 'sinon', name: 'Sinon' },
+      { id: 'proxyquire', name: 'Proxyquire' },
       { id: 'git', name: 'Git' },
-      { id: 'docker', name: 'Docker' },
+      { id: 'scrum', name: 'Scrum' },
+      { id: 'jira', name: 'JIRA' },
     ],
   },
 ];

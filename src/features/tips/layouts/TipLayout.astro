@@ -15,12 +15,12 @@ interface Props {
 const { tip } = Astro.props;
 const { Content } = await render(tip);
 
-const lang = tip.data.lang || 'fr';
+const lang = tip.data.lang || 'es';
 const t = useTranslations(lang, 'tipsPage');
 
-const GITHUB_USER = 'YOUR_GITHUB_USERNAME';
-const GITHUB_REPO = 'YOUR_GITHUB_REPO';
-const GITHUB_BRANCH = 'YOUR_GITHUB_BRANCH';
+const GITHUB_USER = 'danirb';
+const GITHUB_REPO = 'myporfolio';
+const GITHUB_BRANCH = 'main';
 const editUrl = `https://github.com/${GITHUB_USER}/${GITHUB_REPO}/edit/${GITHUB_BRANCH}/${tip.filePath}`;
 ---
 
