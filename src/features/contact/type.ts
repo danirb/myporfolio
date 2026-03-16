@@ -2,11 +2,15 @@ import { z } from 'zod';
 
 export type ContactFormTranslations = {
   firstNameLabel: string;
-  lastNameLabel: string;
   emailLabel: string;
+  subjectLabel: string;
+  subjectPlaceholder: string;
+  subjectOptionJob: string;
+  subjectOptionCollaboration: string;
+  subjectOptionConsulting: string;
+  subjectOptionOther: string;
   messageLabel: string;
   firstNamePlaceholder: string;
-  lastNamePlaceholder: string;
   emailPlaceholder: string;
   messagePlaceholder: string;
   sendButtonLabel: string;
@@ -26,8 +30,8 @@ const stringFieldSchema = (minLength = 2, maxLength = 50) =>
 
 export const contactFormSchema = z.object({
   firstName: stringFieldSchema(),
-  lastName: stringFieldSchema(),
   email: z.string().nonempty().email(),
+  subject: z.string().optional(),
   message: stringFieldSchema(10, 500),
 });
 
