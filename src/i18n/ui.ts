@@ -71,8 +71,7 @@ export const ui = {
       home: 'Inicio',
       blog: 'Blog',
       contact: 'Contacto',
-      projects: 'Proyectos',
-      tips: 'Tips',
+      projects: 'Proyectos'
     },
     footer: {
       rights: 'Todos los derechos reservados.',
@@ -193,22 +192,6 @@ export const ui = {
       homeLink: 'Volver al Inicio',
     },
 
-    tipsPage: {
-      metaTitle: 'Tips de SFCC y E-commerce',
-      metaDescription:
-        'Consejos y astuces sobre Salesforce Commerce Cloud, arquitectura de e-commerce, CI/CD y optimización de performance.',
-      description:
-        'Consejos y astuces sobre Salesforce Commerce Cloud, arquitectura de e-commerce, CI/CD y optimización de performance.',
-      title: 'Últimos Tips y Consejos',
-      noTips: 'No hay tips para mostrar en este momento.',
-      readTip: "Leer tip",
-      backToList: 'Volver a la lista de tips',
-      featuredTips: 'Tips destacados',
-      allTips: 'Todos los tips',
-      tipsAvailable: 'tips disponibles',
-      tipAvailable: 'tip disponible',
-      editOnGithub: 'Editar en GitHub',
-    },
     zodErrors: {
       // Common errors
       invalid_type: 'Tipo inválido.',
@@ -287,7 +270,6 @@ export const ui = {
       blog: 'Blog',
       contact: 'Contact',
       projects: 'Projects',
-      tips: 'Tips',
     },
     footer: {
       rights: 'All rights reserved.',
@@ -405,22 +387,6 @@ export const ui = {
       homeLink: 'Return to Homepage',
     },
 
-    tipsPage: {
-      metaTitle: 'SFCC & E-commerce Tips',
-      metaDescription:
-        'Quick tips and advice on Salesforce Commerce Cloud, e-commerce architecture, CI/CD and performance optimization.',
-      description:
-        'Quick tips and advice on Salesforce Commerce Cloud, e-commerce architecture, CI/CD and performance optimization.',
-      title: 'Latest Tips',
-      noTips: 'No tips to display at the moment.',
-      readTip: 'Read tip',
-      backToList: 'Back to list',
-      featuredTips: 'Featured Tips',
-      allTips: 'All Tips',
-      tipsAvailable: 'tips available',
-      tipAvailable: 'tip available',
-      editOnGithub: 'Edit on GitHub',
-    },
     zodErrors: {
       // Common errors
       invalid_type: 'Invalid type.',
