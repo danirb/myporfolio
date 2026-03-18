@@ -56,5 +56,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  adapter: vercel({ nodeVersion: '22' }),
+  adapter: vercel(),
 });
