@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import nodemailer from 'nodemailer';
 
 export const prerender = false;
 
@@ -9,8 +10,15 @@ import type {
   ContactFormApiResponse,
 } from '@/features/contact/type';
 
+const subjectLabels: Record<string, string> = {
+  job: 'Oferta de trabajo',
+  collaboration: 'Colaboración',
+  consulting: 'Consultoría',
+  other: 'Otro',
+};
+
 export const POST: APIRoute = async ({ request }) => {
-  let lang: LanguageCode = 'en'; // Default language
+  let lang: LanguageCode = 'en';
   let currentTranslations: ContactFormTranslations = ui[lang]
     .contactPage as ContactFormTranslations;
 
@@ -22,19 +30,17 @@ export const POST: APIRoute = async ({ request }) => {
       lang = requestLang;
       currentTranslations = ui[lang].contactPage as ContactFormTranslations;
     }
-    // Separate formData for Zod validation (without lang property)
     const { lang: _lang, ...restOfBody } = requestBody;
     formDataForValidation = restOfBody;
-  } catch (error) {
-    const errorResponse: ContactFormApiResponse = {
-      status: 'error',
-      message: currentTranslations.toastErrorUnexpected,
-      error: 'Invalid JSON input',
-    };
-    return new Response(JSON.stringify(errorResponse), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' },
-    });
+  } catch {
+    return new Response(
+      JSON.stringify({
+        status: 'error',
+        message: currentTranslations.toastErrorUnexpected,
+        error: 'Invalid JSON input',
+      } as ContactFormApiResponse),
+      { status: 400, headers: { 'Content-Type': 'application/json' } }
+    );
   }
 
   const validationResult = ContactFormSchema.safeParse(formDataForValidation);
@@ -50,15 +56,62 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  const { firstName, lastName, email, subject, message } = validationResult.data;
+  const { firstName, email, subject, message } = validationResult.data;
 
-  console.log('Contact form submission received:');
-  console.log('Language:', lang);
-  console.log('From:', `${firstName} ${lastName} <${email}>`);
-  if (subject) console.log('Subject:', subject);
-  console.log('Message:', message);
+  const smtpHost = import.meta.env.SMTP_HOST;
+  const smtpPort = Number(import.meta.env.SMTP_PORT ?? 587);
+  const smtpUser = import.meta.env.SMTP_USER;
+  const smtpPass = import.meta.env.SMTP_PASS;
+  const toEmail = import.meta.env.CONTACT_EMAIL ?? 'danielredondoblanco@gmail.com';
 
-  // Simulate a successful submission (integrate Resend or another email service here)
+  if (!smtpHost || !smtpUser || !smtpPass) {
+    console.error('SMTP env vars not configured');
+    return new Response(
+      JSON.stringify({
+        status: 'error',
+        message: currentTranslations.toastErrorUnexpected,
+        error: 'Email service not configured',
+      } as ContactFormApiResponse),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
+
+  const transporter = nodemailer.createTransport({
+    host: smtpHost,
+    port: smtpPort,
+    secure: smtpPort === 465,
+    auth: { user: smtpUser, pass: smtpPass },
+  });
+
+  const subjectLabel = subject ? (subjectLabels[subject] ?? subject) : 'Sin asunto';
+
+  try {
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${smtpUser}>`,
+      to: toEmail,
+      replyTo: email,
+      subject: `[Portfolio] ${subjectLabel} — ${firstName}`,
+      text: `Nombre: ${firstName}\nEmail: ${email}\nAsunto: ${subjectLabel}\n\n${message}`,
+      html: `
+        <p><strong>Nombre:</strong> ${firstName}</p>
+        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Asunto:</strong> ${subjectLabel}</p>
+        <hr/>
+        <p>${message.replace(/\n/g, '<br/>')}</p>
+      `,
+    });
+  } catch (err) {
+    console.error('SMTP send error:', err);
+    return new Response(
+      JSON.stringify({
+        status: 'error',
+        message: currentTranslations.toastErrorFailedToSend,
+        error: String(err),
+      } as ContactFormApiResponse),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
+
   return new Response(
     JSON.stringify({
       status: 'success',
