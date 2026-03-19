@@ -6,6 +6,7 @@ import unode50Image from '@/assets/unode50.svg';
 import jaenaaprendeImage from '@/assets/jaenaprende.png';
 import parfois from '@/assets/parfois.svg';
 import hostaletacionImage from '@/assets/hostalestacion.png';
+import rollodesarrolloImage from '@/assets/rollodesarrollo.png';
 import type {
   ProjectData,
   SkillData,
@@ -101,7 +102,7 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'rolloDesarrollo',
     slug: 'rollo-desarrollo',
-    imageUrl: placeholderImage,
+    imageUrl: rollodesarrolloImage,
     projectUrl: 'https://www.rollodesarrollo.com',
     tags: ['Podcast', 'Web', 'JavaScript'],
     category: 'Web / Media',
