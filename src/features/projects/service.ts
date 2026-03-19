@@ -4,6 +4,7 @@ import placeholderImage from '@/assets/placeholder.webp';
 import tennisPointImage from '@/assets/tennispoint.avif';
 import unode50Image from '@/assets/unode50.svg';
 import jaenaaprendeImage from '@/assets/jaenaprende.png';
+import parfois from '@/assets/parfois.svg';
 import type {
   ProjectData,
   SkillData,
@@ -136,7 +137,7 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'parfois',
     slug: 'parfois',
-    imageUrl: placeholderImage,
+    imageUrl: parfois,
     tags: ['SFCC', 'SiteGenesis', 'OCAPI', 'Android', 'Kotlin'],
     category: 'SFCC / eCommerce',
     date: '2020-11-01',
