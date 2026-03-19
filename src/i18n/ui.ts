@@ -149,14 +149,14 @@ export const ui = {
           'Construir un producto SaaS propio obliga a pensar en escalabilidad, experiencia de usuario y modelo de negocio de forma simultánea. La simplicidad en la UX es tan importante como la robustez técnica.',
       },
       rolloDesarrollo: {
-        title: 'Rollo de Desarrollo · Podcast',
+        title: 'Rollodesarrollo · Podcast',
         description:
-          'Web del podcast "Rollo de Desarrollo", donde se habla de tecnología, desarrollo de software y carrera profesional en IT.',
-        imageAltText: 'Web del podcast Rollo de Desarrollo',
+          'Web del podcast "Rollodesarrollo", donde se habla de tecnología, desarrollo de software y carrera profesional en IT.',
+        imageAltText: 'Web del podcast Rollodesarrollo',
         categoryText: 'Web / Media',
         dateText: '2023',
         detailedDescription:
-          'Diseño y desarrollo de la web del podcast "Rollo de Desarrollo". Plataforma de contenido donde se publican episodios, notas del programa y recursos para la comunidad de desarrolladores. Interfaz ligera, optimizada para el consumo de contenido multimedia y con buenas prácticas de SEO para posicionar episodios en buscadores.',
+          'Diseño y desarrollo de la web del podcast "Rollodesarrollo". Plataforma de contenido donde se publican episodios, notas del programa y recursos para la comunidad de desarrolladores. Interfaz ligera, optimizada para el consumo de contenido multimedia y con buenas prácticas de SEO para posicionar episodios en buscadores.',
         keyFeatures: {
           podcastWeb: {
             title: 'Plataforma de Podcast',
@@ -176,10 +176,10 @@ export const ui = {
           'Un podcast tiene necesidades de contenido y SEO específicas. La consistencia de publicación, la comunidad y una buena arquitectura de contenido son clave para el crecimiento orgánico.',
       },
       hostaletacion: {
-        title: 'Hostaleta & Ción · Web Hotel con Integraciones',
+        title: 'Hostal EstaciÓN · Web Hotel con Integraciones',
         description:
           'Web corporativa de hotel en Jaén con integración de sistema de reservas, galería de instalaciones y optimización SEO local para la captación de clientes directos.',
-        imageAltText: 'Web del hotel Hostaleta & Ción en Jaén',
+        imageAltText: 'Web del hotel Hostal EstaciÓN en Jaén',
         categoryText: 'Web / Turismo',
         dateText: '2022',
         detailedDescription:
@@ -570,14 +570,14 @@ export const ui = {
           'Building your own SaaS product forces you to think about scalability, user experience and business model simultaneously. Simplicity in UX is as important as technical robustness.',
       },
       rolloDesarrollo: {
-        title: 'Rollo de Desarrollo · Podcast',
+        title: 'Rollodesarrollo · Podcast',
         description:
-          'Website for the "Rollo de Desarrollo" podcast, covering technology, software development and professional careers in IT.',
-        imageAltText: 'Rollo de Desarrollo podcast website',
+          'Website for the "Rollodesarrollo" podcast, covering technology, software development and professional careers in IT.',
+        imageAltText: 'Rollodesarrollo podcast website',
         categoryText: 'Web / Media',
         dateText: '2023',
         detailedDescription:
-          'Design and development of the "Rollo de Desarrollo" podcast website. Content platform for publishing episodes, show notes and resources for the developer community. Lightweight interface optimised for multimedia content consumption and with SEO best practices to rank episodes in search engines.',
+          'Design and development of the "Rollodesarrollo" podcast website. Content platform for publishing episodes, show notes and resources for the developer community. Lightweight interface optimised for multimedia content consumption and with SEO best practices to rank episodes in search engines.',
         keyFeatures: {
           podcastWeb: {
             title: 'Podcast Platform',
@@ -597,10 +597,10 @@ export const ui = {
           'A podcast has specific content and SEO needs. Publishing consistency, community and a solid content architecture are key for organic growth.',
       },
       hostaletacion: {
-        title: 'Hostaleta & Ción · Hotel Website with Integrations',
+        title: 'Hostal EstaciÓN · Hotel Website with Integrations',
         description:
           'Corporate hotel website in Jaén with booking system integration, facilities gallery and local SEO optimisation to attract direct bookings.',
-        imageAltText: 'Hostaleta & Ción hotel website in Jaén',
+        imageAltText: 'Hostal EstaciÓN hotel website in Jaén',
         categoryText: 'Web / Tourism',
         dateText: '2022',
         detailedDescription:
