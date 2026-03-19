@@ -28,7 +28,7 @@ const { pageTitle, pageDescription } = Astro.props;
 const lang =
   (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
 
-const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const siteUrl = Astro.url.origin;
 const ogImage = `${siteUrl}/og-image.png`;
 const ogTitle = pageTitle || 'Daniel Redondo Blanco';
 const ogDescription = pageDescription || 'Salesforce Commerce Cloud Senior Developer';
