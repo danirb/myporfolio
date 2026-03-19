@@ -1,6 +1,8 @@
 // Import i18n utilities
 import { ui, defaultLanguage, type LanguageCode } from '@/i18n/ui';
 import placeholderImage from '@/assets/placeholder.webp';
+import tennisPointImage from '@/assets/tennispoint.avif';
+import unode50Image from '@/assets/unode50.svg';
 import type {
   ProjectData,
   SkillData,
@@ -12,7 +14,7 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'unode50',
     slug: 'unode50',
-    imageUrl: placeholderImage,
+    imageUrl: unode50Image,
     tags: ['SFCC', 'SFRA', 'SCAPI', 'CI/CD', 'Adyen'],
     category: 'SFCC / eCommerce',
     date: '2025-08-01',
@@ -55,7 +57,7 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'tennisPoint',
     slug: 'tennis-point',
-    imageUrl: placeholderImage,
+    imageUrl: tennisPointImage,
     tags: ['SFCC', 'SFRA', 'Multisite', 'CI/CD', 'Testing'],
     category: 'SFCC / eCommerce',
     date: '2024-08-01',
