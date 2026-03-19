@@ -5,6 +5,7 @@ import tennisPointImage from '@/assets/tennispoint.avif';
 import unode50Image from '@/assets/unode50.svg';
 import jaenaaprendeImage from '@/assets/jaenaprende.png';
 import parfois from '@/assets/parfois.svg';
+import hostaletacionImage from '@/assets/hostalestacion.png';
 import type {
   ProjectData,
   SkillData,
@@ -118,7 +119,7 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'hostaletacion',
     slug: 'hostaleta-cion-jaen',
-    imageUrl: placeholderImage,
+    imageUrl: hostaletacionImage,
     projectUrl: 'https://www.hostaletacionjaen.com',
     tags: ['Hotel', 'Web', 'Integraciones', 'Booking'],
     category: 'Web / Turismo',
