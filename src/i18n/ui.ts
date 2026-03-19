@@ -246,25 +246,25 @@ export const ui = {
       },
     },
     skillsContent: {
-      sfccDevelopment: {
-        title: 'Salesforce Commerce Cloud (SFCC)',
+      sfccEcommerce: {
+        title: 'Salesforce Commerce Cloud',
         description:
-          'Arquitectura SFRA, OCAPI/REST, pasarelas de pago (Adyen, PayPal), y plataformas multisite escalables.',
+          'Desarrollo en SFRA y SiteGenesis, OCAPI/SCAPI, Page Designer, Einstein, pipelines CI/CD y cartridges custom para plataformas eCommerce escalables.',
       },
-      architectureDesign: {
-        title: 'Diseño de Arquitectura',
+      javascriptNode: {
+        title: 'JavaScript & Web',
         description:
-          'Decisiones técnicas end-to-end, integraciones complejas, performance y seguridad en sistemas de e-commerce.',
+          'JavaScript ES6+, TypeScript, Node.js, HTML5, CSS3 y SASS. Desarrollo full-stack orientado a rendimiento y mantenibilidad.',
       },
-      cicdAutomation: {
-        title: 'CI/CD y DevOps',
+      mobileAndroid: {
+        title: 'Desarrollo Mobile (Android)',
         description:
-          'Diseño y automatización de pipelines, reducción de time-to-market, deployments seguros y monitoreo en producción.',
+          'Apps nativas en Kotlin y Java, incluyendo Android TV y publicación en Google Play.',
       },
-      requirementsAnalysis: {
-        title: 'Análisis de Requisitos',
+      testingDevops: {
+        title: 'Testing & DevOps',
         description:
-          'Toma de requisitos con negocio, traducción técnico-funcional, coordinación con proveedores y equipos ágiles remotos.',
+          'Testing unitario con Mocha, Chai, Sinon y Proxyquire. Control de versiones con Git, metodologías ágiles con Scrum y gestión con JIRA.',
       },
     },
     site: {
@@ -667,25 +667,25 @@ export const ui = {
       },
     },
     skillsContent: {
-      sfccDevelopment: {
-        title: 'Salesforce Commerce Cloud (SFCC)',
+      sfccEcommerce: {
+        title: 'Salesforce Commerce Cloud',
         description:
-          'SFRA architecture, OCAPI/REST, payment gateways (Adyen, PayPal), and scalable multisite platforms.',
+          'Development with SFRA and SiteGenesis, OCAPI/SCAPI, Page Designer, Einstein, CI/CD pipelines, and custom cartridges for scalable eCommerce platforms.',
       },
-      architectureDesign: {
-        title: 'Architecture Design',
+      javascriptNode: {
+        title: 'JavaScript & Web',
         description:
-          'End-to-end technical decisions, complex integrations, performance and security in e-commerce systems.',
+          'JavaScript ES6+, TypeScript, Node.js, HTML5, CSS3, and SASS. Full-stack development focused on performance and maintainability.',
       },
-      cicdAutomation: {
-        title: 'CI/CD & DevOps',
+      mobileAndroid: {
+        title: 'Mobile Development (Android)',
         description:
-          'Pipeline design and automation, time-to-market reduction, secure deployments and production monitoring.',
+          'Native apps with Kotlin and Java, including Android TV and Google Play publishing.',
       },
-      requirementsAnalysis: {
-        title: 'Requirements Analysis',
+      testingDevops: {
+        title: 'Testing & DevOps',
         description:
-          'Requirement gathering with business teams, technical-functional translation, vendor coordination and remote agile teams.',
+          'Unit testing with Mocha, Chai, Sinon, and Proxyquire. Version control with Git, agile methodologies with Scrum, and project management with JIRA.',
       },
     },
     site: {
