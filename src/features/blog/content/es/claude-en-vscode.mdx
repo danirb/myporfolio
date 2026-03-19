@@ -1,0 +1,127 @@
+---
+lang: 'es'
+title: 'Cómo empezar a usar Claude desde VS Code'
+description: 'Guía práctica para instalar y sacar partido a Claude directamente desde tu editor. Desde la instalación hasta los primeros prompts que te cambiarán el flujo de trabajo.'
+pubDate: 2025-03-19
+heroImage:
+  url: '../../../../assets/placeholder.webp'
+  alt: 'Claude Code en VS Code'
+tags: ['ia', 'vscode', 'claude', 'productividad']
+difficulty: 'beginner'
+isDraft: false
+featured: true
+relatedPosts: []
+---
+
+import InfoAlert from '@/features/blog/components/InfoAlert.astro';
+
+## ¿Qué es Claude Code?
+
+Claude Code es la extensión oficial de Anthropic para integrar Claude directamente en tu editor. No es un simple autocompletado: es un agente que entiende tu proyecto completo, puede leer y modificar ficheros, ejecutar comandos y razonar sobre tu código como lo haría un compañero de equipo.
+
+<InfoAlert title="Requisito previo">
+  Necesitas una cuenta en [claude.ai](https://claude.ai) o acceso a la API de Anthropic para usar Claude Code.
+</InfoAlert>
+
+## Instalación
+
+### 1. Instalar la extensión
+
+Abre VS Code y busca **"Claude Code"** en el Marketplace, o instala directamente desde el terminal:
+
+```bash
+code --install-extension anthropic.claude-code
+```
+
+Tras instalar, verás el icono de Claude en la barra lateral izquierda.
+
+### 2. Autenticarse
+
+Al abrir la extensión por primera vez, te pedirá que inicies sesión con tu cuenta de Anthropic. Sigue el flujo OAuth y en menos de un minuto estarás listo.
+
+## Primeros pasos
+
+### Abrir el chat
+
+Usa el atajo `Ctrl+Shift+P` (o `Cmd+Shift+P` en Mac) y busca **"Claude: Open Chat"**, o haz clic en el icono de la barra lateral.
+
+También puedes abrir un chat inline directamente sobre una selección de código con `Ctrl+K`.
+
+### Tu primer prompt útil
+
+Selecciona una función en tu código, pulsa `Ctrl+K` y escribe:
+
+```
+Explícame qué hace esta función y sugiere cómo mejorar su legibilidad
+```
+
+Claude analizará el contexto del fichero completo, no solo la selección.
+
+## Funcionalidades que más uso
+
+### Modo agente (agentic mode)
+
+Es donde Claude Code brilla de verdad. En lugar de hacer preguntas y aplicar manualmente los cambios, le describes la tarea y él actúa:
+
+```
+Refactoriza el componente ContactForm para extraer la lógica de validación
+a un hook personalizado useContactForm
+```
+
+Claude leerá los ficheros relevantes, hará los cambios y te mostrará un diff para que lo apruebes.
+
+### Contexto de proyecto
+
+A diferencia de pegar código en el chat de claude.ai, la extensión tiene acceso directo a todo tu repositorio. Puedes hacer preguntas como:
+
+```
+¿Dónde se gestiona el estado de autenticación en este proyecto?
+```
+
+Y Claude navegará por los ficheros para darte una respuesta precisa.
+
+### Generación de tests
+
+Selecciona una función y pídele:
+
+```
+Genera tests unitarios con Vitest para esta función,
+cubriendo los casos edge más importantes
+```
+
+### Revisión de PR antes de hacer commit
+
+Antes de commitear, pídele:
+
+```
+Revisa los cambios que he hecho y dime si hay algo que mejorar
+en términos de rendimiento, seguridad o legibilidad
+```
+
+## Tips para sacarle más partido
+
+**Sé específico con el contexto.** En lugar de "arregla esto", di "arregla esto teniendo en cuenta que usamos React 19 con TypeScript strict".
+
+**Usa CLAUDE.md.** Crea un fichero `CLAUDE.md` en la raíz de tu proyecto con convenciones del equipo, stack tecnológico y reglas de estilo. Claude lo leerá automáticamente en cada conversación.
+
+```markdown
+# CLAUDE.md
+
+## Stack
+- Astro 5 + React 19 + TypeScript
+- TailwindCSS para estilos
+- pnpm como gestor de paquetes
+
+## Convenciones
+- Componentes en PascalCase
+- Hooks con prefijo use
+- No usar any en TypeScript
+```
+
+**Itera en la conversación.** Claude recuerda el contexto de la conversación. Si el resultado no es exactamente lo que buscabas, corrígele directamente en lugar de empezar de cero.
+
+## Conclusión
+
+Claude Code transforma VS Code en algo que va más allá de un editor. Si llevas tiempo usando Copilot o similares, notarás la diferencia en la calidad del razonamiento y en la capacidad de entender el proyecto como un todo.
+
+Empieza con tareas pequeñas —refactorizaciones, generación de tests, explicación de código heredado— y ve aumentando la complejidad según te familiarices con lo que puede hacer.

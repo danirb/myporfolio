@@ -1,0 +1,127 @@
+---
+lang: 'en'
+title: 'How to Start Using Claude in VS Code'
+description: 'A practical guide to installing and getting the most out of Claude directly from your editor. From installation to the first prompts that will change your workflow.'
+pubDate: 2025-03-19
+heroImage:
+  url: '../../../../assets/placeholder.webp'
+  alt: 'Claude Code in VS Code'
+tags: ['ai', 'vscode', 'claude', 'productivity']
+difficulty: 'beginner'
+isDraft: false
+featured: true
+relatedPosts: []
+---
+
+import InfoAlert from '@/features/blog/components/InfoAlert.astro';
+
+## What is Claude Code?
+
+Claude Code is Anthropic's official extension for integrating Claude directly into your editor. It's not just autocomplete — it's an agent that understands your entire project, can read and modify files, run commands, and reason about your code the way a teammate would.
+
+<InfoAlert title="Prerequisite">
+  You need a [claude.ai](https://claude.ai) account or access to the Anthropic API to use Claude Code.
+</InfoAlert>
+
+## Installation
+
+### 1. Install the extension
+
+Open VS Code and search for **"Claude Code"** in the Marketplace, or install directly from the terminal:
+
+```bash
+code --install-extension anthropic.claude-code
+```
+
+After installing, you'll see the Claude icon in the left sidebar.
+
+### 2. Authenticate
+
+When you open the extension for the first time, it will ask you to sign in with your Anthropic account. Follow the OAuth flow and you'll be ready in under a minute.
+
+## First Steps
+
+### Open the chat
+
+Use the shortcut `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) and search for **"Claude: Open Chat"**, or click the icon in the sidebar.
+
+You can also open an inline chat directly on a code selection with `Ctrl+K`.
+
+### Your first useful prompt
+
+Select a function in your code, press `Ctrl+K`, and type:
+
+```
+Explain what this function does and suggest how to improve its readability
+```
+
+Claude will analyze the full file context, not just your selection.
+
+## Features I Use the Most
+
+### Agentic mode
+
+This is where Claude Code really shines. Instead of answering questions and manually applying changes, you describe the task and it acts:
+
+```
+Refactor the ContactForm component to extract the validation logic
+into a custom useContactForm hook
+```
+
+Claude will read the relevant files, make the changes, and show you a diff to approve.
+
+### Project context
+
+Unlike pasting code into the claude.ai chat, the extension has direct access to your entire repository. You can ask things like:
+
+```
+Where is authentication state managed in this project?
+```
+
+And Claude will navigate through the files to give you a precise answer.
+
+### Test generation
+
+Select a function and ask:
+
+```
+Generate unit tests with Vitest for this function,
+covering the most important edge cases
+```
+
+### PR review before committing
+
+Before committing, ask:
+
+```
+Review the changes I've made and tell me if there's anything to improve
+in terms of performance, security, or readability
+```
+
+## Tips for Getting More Out of It
+
+**Be specific with context.** Instead of "fix this", say "fix this keeping in mind we use React 19 with strict TypeScript".
+
+**Use CLAUDE.md.** Create a `CLAUDE.md` file at the root of your project with team conventions, tech stack, and style rules. Claude will read it automatically in every conversation.
+
+```markdown
+# CLAUDE.md
+
+## Stack
+- Astro 5 + React 19 + TypeScript
+- TailwindCSS for styles
+- pnpm as package manager
+
+## Conventions
+- Components in PascalCase
+- Hooks with use prefix
+- No any in TypeScript
+```
+
+**Iterate in the conversation.** Claude remembers the conversation context. If the result isn't exactly what you wanted, correct it directly instead of starting over.
+
+## Conclusion
+
+Claude Code transforms VS Code into something beyond just an editor. If you've been using Copilot or similar tools, you'll notice the difference in reasoning quality and the ability to understand the project as a whole.
+
+Start with small tasks — refactoring, test generation, explaining legacy code — and increase complexity as you get familiar with what it can do.
