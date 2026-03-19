@@ -21,7 +21,7 @@ console.log(`Using Mermaid strategy: ${mermaidStrategy}`);
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.SITE_URL ?? 'https://example.com',
+  site: process.env.SITE_URL ?? 'https://danielredondoblanco.vercel.app',
   integrations: [
     react(),
     mdx({
