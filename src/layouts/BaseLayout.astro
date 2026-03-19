@@ -28,8 +28,7 @@ const { pageTitle, pageDescription } = Astro.props;
 const lang =
   (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
 
-const siteUrl = 'https://danielredondoblanco.vercel.app';
-const ogImage = `${siteUrl}/og-image.png`;
+const ogImage = 'https://danielredondoblanco.vercel.app/og.png';
 const ogTitle = pageTitle || 'Daniel Redondo Blanco';
 const ogDescription = pageDescription || 'Salesforce Commerce Cloud Senior Developer';
 const currentPathname = Astro.url.pathname;
