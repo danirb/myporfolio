@@ -3,6 +3,7 @@ import { ui, defaultLanguage, type LanguageCode } from '@/i18n/ui';
 import placeholderImage from '@/assets/placeholder.webp';
 import tennisPointImage from '@/assets/tennispoint.avif';
 import unode50Image from '@/assets/unode50.svg';
+import jaenaaprendeImage from '@/assets/jaenaprende.png';
 import type {
   ProjectData,
   SkillData,
@@ -38,7 +39,7 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'jaenaprende',
     slug: 'jaena-aprende',
-    imageUrl: placeholderImage,
+    imageUrl: jaenaaprendeImage,
     projectUrl: 'https://www.jaenaprende.es',
     tags: ['Formación IT', 'Astro.js', 'Make', 'Web'],
     category: 'Web / Educación',
