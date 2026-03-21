@@ -1,0 +1,249 @@
+---
+lang: 'es'
+title: 'Cómo montar n8n en un VPS'
+description: 'Guía completa para desplegar n8n en tu propio servidor con Docker, Nginx y SSL. Automatiza tus flujos de trabajo sin depender de servicios externos y sin pagar por cada ejecución.'
+pubDate: 2026-03-21
+heroImage:
+  url: '../../../../assets/placeholder.webp'
+  alt: 'n8n ejecutándose en un VPS'
+tags: ['n8n', 'automatización', 'vps', 'docker', 'devops']
+difficulty: 'intermediate'
+isDraft: false
+featured: true
+relatedPosts: []
+---
+
+import InfoAlert from '@/features/blog/components/InfoAlert.astro';
+
+## ¿Por qué alojar n8n en tu propio servidor?
+
+[n8n](https://n8n.io) es una herramienta de automatización de flujos de trabajo de código abierto, similar a Zapier o Make, pero con una diferencia clave: puedes **auto-alojarlo** (self-host) y tener control total sobre tus datos y ejecuciones.
+
+La versión cloud de n8n cobra por operaciones. Si automatizas procesos con cierto volumen, los costes se disparan. Con un VPS de 5-10€/mes tienes ejecuciones ilimitadas y tus datos no salen de tu infraestructura.
+
+<InfoAlert title="Requisitos mínimos del VPS">
+  Para un uso personal o de equipo pequeño, con 1 vCPU y 1 GB de RAM es suficiente para empezar. Para flujos de trabajo más intensivos, recomiendo 2 vCPU y 2 GB de RAM.
+</InfoAlert>
+
+## Lo que vamos a montar
+
+- **n8n** corriendo en Docker
+- **Nginx** como reverse proxy
+- **SSL con Let's Encrypt** para HTTPS
+- **Persistencia de datos** con volúmenes Docker
+
+## Preparar el servidor
+
+Asume que tienes un VPS con Ubuntu 22.04 y acceso SSH. Lo primero es actualizar el sistema e instalar Docker:
+
+```bash
+# Actualizar paquetes
+sudo apt update && sudo apt upgrade -y
+
+# Instalar dependencias
+sudo apt install -y ca-certificates curl gnupg
+
+# Añadir la clave GPG de Docker
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Añadir el repositorio
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Instalar Docker
+sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+# Añadir tu usuario al grupo docker (evita usar sudo)
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+## Configurar n8n con Docker Compose
+
+Crea un directorio para n8n y define el `compose.yml`:
+
+```bash
+mkdir -p ~/n8n && cd ~/n8n
+```
+
+```yaml
+# ~/n8n/compose.yml
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5678:5678"
+    environment:
+      - N8N_HOST=n8n.tudominio.com
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=https
+      - WEBHOOK_URL=https://n8n.tudominio.com/
+      - GENERIC_TIMEZONE=Europe/Madrid
+      - TZ=Europe/Madrid
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  n8n_data:
+```
+
+<InfoAlert title="Sustituye el dominio">
+  Cambia `n8n.tudominio.com` por el subdominio que vayas a usar. Asegúrate de que el registro DNS A apunta a la IP de tu VPS antes de continuar.
+</InfoAlert>
+
+Arranca el contenedor:
+
+```bash
+docker compose up -d
+```
+
+Verifica que está corriendo:
+
+```bash
+docker compose logs -f n8n
+```
+
+## Instalar y configurar Nginx
+
+```bash
+sudo apt install -y nginx
+```
+
+Crea el fichero de configuración del sitio:
+
+```bash
+sudo nano /etc/nginx/sites-available/n8n
+```
+
+```nginx
+server {
+    listen 80;
+    server_name n8n.tudominio.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:5678;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Necesario para websockets (n8n los usa en el editor)
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+
+        # Aumentar timeouts para flujos largos
+        proxy_read_timeout 300;
+        proxy_connect_timeout 300;
+        proxy_send_timeout 300;
+    }
+}
+```
+
+Activa el sitio y recarga Nginx:
+
+```bash
+sudo ln -s /etc/nginx/sites-available/n8n /etc/nginx/sites-enabled/
+sudo nginx -t && sudo systemctl reload nginx
+```
+
+## SSL con Let's Encrypt
+
+```bash
+sudo apt install -y certbot python3-certbot-nginx
+
+sudo certbot --nginx -d n8n.tudominio.com
+```
+
+Certbot modificará automáticamente la configuración de Nginx para incluir HTTPS y configurará la renovación automática del certificado.
+
+Verifica que la renovación automática funciona:
+
+```bash
+sudo certbot renew --dry-run
+```
+
+## Primer acceso a n8n
+
+Abre `https://n8n.tudominio.com` en el navegador. La primera vez te pedirá crear una cuenta de administrador. Este usuario es **local** —no se sincroniza con n8n cloud— y solo existe en tu instancia.
+
+Una vez dentro, ya puedes crear tu primer flujo de trabajo.
+
+## Seguridad básica
+
+### Autenticación básica (opcional pero recomendada)
+
+Si no quieres exponer el panel de n8n directamente a internet, puedes añadir autenticación básica en Nginx como capa adicional:
+
+```bash
+sudo apt install -y apache2-utils
+sudo htpasswd -c /etc/nginx/.htpasswd tu_usuario
+```
+
+Añade esto dentro del bloque `location /` en Nginx:
+
+```nginx
+auth_basic "Acceso restringido";
+auth_basic_user_file /etc/nginx/.htpasswd;
+```
+
+### Firewall
+
+Permite solo los puertos necesarios:
+
+```bash
+sudo ufw allow OpenSSH
+sudo ufw allow 'Nginx Full'
+sudo ufw enable
+```
+
+### Actualizaciones automáticas de seguridad
+
+```bash
+sudo apt install -y unattended-upgrades
+sudo dpkg-reconfigure --priority=low unattended-upgrades
+```
+
+## Actualizar n8n
+
+Para actualizar a la última versión de n8n:
+
+```bash
+cd ~/n8n
+docker compose pull
+docker compose up -d
+```
+
+Docker descargará la nueva imagen y reiniciará el contenedor preservando todos tus flujos de trabajo y credenciales (están en el volumen `n8n_data`).
+
+## Comandos útiles del día a día
+
+```bash
+# Ver logs en tiempo real
+docker compose logs -f n8n
+
+# Reiniciar n8n
+docker compose restart n8n
+
+# Parar n8n
+docker compose stop n8n
+
+# Ver uso de recursos
+docker stats n8n
+
+# Hacer backup del volumen de datos
+docker run --rm -v n8n_data:/data -v $(pwd):/backup alpine \
+  tar czf /backup/n8n-backup-$(date +%Y%m%d).tar.gz -C /data .
+```
+
+## Conclusión
+
+Con esto tienes una instancia de n8n completamente funcional, accesible por HTTPS, con datos persistentes y con reinicio automático si el servidor se reinicia.
+
+El siguiente paso natural es explorar los más de 400 integraciones que tiene n8n y construir tus primeros flujos. Si vienes de Zapier o Make, la curva de aprendizaje es corta —el editor visual es muy intuitivo— y enseguida notarás la diferencia de no tener límites de operaciones.
