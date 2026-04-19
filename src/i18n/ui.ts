@@ -117,36 +117,36 @@ export const ui = {
           'El testing exhaustivo y una arquitectura SFRA modular y bien documentada son la base de sistemas eCommerce resilientes y mantenibles a largo plazo. Trabajar con un equipo distribuido internacional fortalece la comunicación técnica y las habilidades de coordinación remota.',
       },
       aprendesk: {
-        title: 'Aprendesk · SaaS de Gestión a Medida',
+        title: 'Aprendesk · Plataforma SaaS de Gestión Empresarial',
         description:
-          'Plataforma SaaS de gestión a medida para empresas y formadores. Diseñada para optimizar procesos internos con una interfaz intuitiva y arquitectura escalable.',
-        imageAltText: 'Plataforma SaaS Aprendesk de gestión',
+          'SaaS de gestión empresarial para formadores, academias y centros de capacitación. Automatiza procesos administrativos con un dashboard intuitivo, analítica avanzada y reporting en tiempo real.',
+        imageAltText: 'Plataforma SaaS Aprendesk de gestión empresarial',
         categoryText: 'SaaS',
-        dateText: '2024',
+        dateText: 'Jun 2024 – Presente',
         detailedDescription:
-          'Aprendesk es una plataforma SaaS de gestión a medida orientada a empresas del sector formativo y educativo. Diseñada con un enfoque mobile-first, ofrece herramientas de gestión de procesos, seguimiento y reporting adaptadas a los flujos de trabajo específicos de cada cliente. Arquitectura escalable construida con TypeScript, Node.js y una interfaz de usuario moderna, accesible y optimizada para la adopción rápida.',
+          'Aprendesk es una plataforma SaaS full-stack diseñada para automatizar la gestión administrativa de empresas formativas y educativas. Construida con TypeScript, React y Node.js, ofrece un dashboard intuitivo con gestión de alumnos, cursos, facturación, seguimiento de progreso y reporting avanzado. La arquitectura escalable con PostgreSQL garantiza rendimiento y seguridad en entornos multi-tenant, mientras que la interfaz mobile-first permite acceso desde cualquier dispositivo. Publicada en www.aprendesk.app con funcionalidades de integración y API REST para terceros.',
         keyFeatures: {
           customManagement: {
-            title: 'Gestión a Medida',
+            title: 'Gestión Integral de Procesos',
             description:
-              'Herramientas adaptadas a los flujos de trabajo específicos de empresas formativas, evitando el sobrecoste de soluciones genéricas.',
+              'Módulos de alumnos, cursos, facturación y seguimiento adaptados a los flujos de trabajo específicos del sector educativo y formativo.',
           },
           saasArchitecture: {
-            title: 'Arquitectura SaaS Escalable',
+            title: 'Arquitectura SaaS Escalable Multi-tenant',
             description:
-              'Diseñada para soportar múltiples clientes con rendimiento, seguridad y aislamiento de datos.',
+              'Infraestructura robusta con aislamiento de datos, rendimiento garantizado y seguridad empresarial para múltiples clientes concurrentes.',
           },
           userInterface: {
-            title: 'Interfaz Intuitiva',
+            title: 'Dashboard Mobile-First Intuitivo',
             description:
-              'UX/UI pensada para maximizar la adopción y minimizar la curva de aprendizaje, con diseño mobile-first.',
+              'Interfaz moderna optimizada para accesibilidad, con UX diseñada para máxima adopción sin curva de aprendizaje.',
           },
         },
         galleryImages: {},
         challenges:
-          'Diseñar una arquitectura SaaS flexible que se adapte a diferentes modelos de negocio manteniendo el código limpio, seguro y mantenible a largo plazo.',
+          'Diseñar un SaaS flexible que se adapte a diferentes modelos de negocio (academias, cursos online, formación corporativa) sin comprometer la seguridad de datos multi-tenant ni la performance bajo carga.',
         learnings:
-          'Construir un producto SaaS propio obliga a pensar en escalabilidad, experiencia de usuario y modelo de negocio de forma simultánea. La simplicidad en la UX es tan importante como la robustez técnica.',
+          'Construir un SaaS propio desde cero requiere equilibrio entre features de usuario, robustez técnica y viabilidad económica. La priorización ruthless es clave: no todas las features solicitadas agregan valor al MVP. La experiencia de usuario es el multiplicador más importante para la adopción.',
       },
       rolloDesarrollo: {
         title: 'Rollodesarrollo · Podcast',
@@ -538,36 +538,36 @@ export const ui = {
           'Thorough testing and a modular, well-documented SFRA architecture are the foundation of resilient and maintainable eCommerce systems. Working with an international distributed team strengthens technical communication and remote coordination skills.',
       },
       aprendesk: {
-        title: 'Aprendesk · Custom Management SaaS',
+        title: 'Aprendesk · Enterprise Management SaaS Platform',
         description:
-          'Custom management SaaS platform for businesses and trainers. Designed to optimise internal processes with an intuitive interface and scalable architecture.',
-        imageAltText: 'Aprendesk management SaaS platform',
+          'SaaS platform for training companies and educational institutions. Automates administrative processes with an intuitive dashboard, advanced analytics and real-time reporting.',
+        imageAltText: 'Aprendesk enterprise management SaaS platform',
         categoryText: 'SaaS',
-        dateText: '2024',
+        dateText: 'Jun 2024 – Present',
         detailedDescription:
-          'Aprendesk is a custom management SaaS platform aimed at companies in the training and education sector. Built with a mobile-first approach, it provides process management, tracking and reporting tools tailored to each client\'s specific workflows. Scalable architecture built with TypeScript, Node.js and a modern, accessible user interface optimised for fast adoption.',
+          'Aprendesk is a full-stack SaaS platform designed to automate administrative management for training and educational enterprises. Built with TypeScript, React and Node.js, it provides an intuitive dashboard featuring student management, course administration, billing, progress tracking and advanced reporting. The scalable multi-tenant architecture with PostgreSQL ensures performance and security for multiple concurrent clients, while the mobile-first interface enables access from any device. Live at www.aprendesk.app with REST API integration capabilities for third-party services.',
         keyFeatures: {
           customManagement: {
-            title: 'Custom Management Tools',
+            title: 'Comprehensive Process Management',
             description:
-              'Tools adapted to the specific workflows of training companies, avoiding the overhead of generic solutions.',
+              'Student, course, billing and progress tracking modules tailored to the specific workflows of the education and training sector.',
           },
           saasArchitecture: {
-            title: 'Scalable SaaS Architecture',
+            title: 'Scalable Multi-Tenant SaaS Architecture',
             description:
-              'Designed to support multiple tenants with performance, security and data isolation.',
+              'Robust infrastructure with data isolation, guaranteed performance and enterprise-grade security for multiple concurrent clients.',
           },
           userInterface: {
-            title: 'Intuitive Interface',
+            title: 'Mobile-First Intuitive Dashboard',
             description:
-              'UX/UI designed to maximise adoption and minimise the learning curve, with a mobile-first approach.',
+              'Modern interface optimised for accessibility, with UX designed for maximum adoption and minimal learning curve.',
           },
         },
         galleryImages: {},
         challenges:
-          'Designing a flexible SaaS architecture that adapts to different business models while keeping the codebase clean, secure and maintainable long-term.',
+          'Designing a flexible SaaS that adapts to different business models (academies, online courses, corporate training) without compromising multi-tenant data security or performance under load.',
         learnings:
-          'Building your own SaaS product forces you to think about scalability, user experience and business model simultaneously. Simplicity in UX is as important as technical robustness.',
+          'Building a SaaS from scratch requires balancing user features, technical robustness and financial viability. Ruthless prioritisation is key: not all requested features add MVP value. User experience is the strongest multiplier for adoption.',
       },
       rolloDesarrollo: {
         title: 'Rollodesarrollo · Podcast',

@@ -86,9 +86,9 @@ const projectsListUnsorted: Array<ProjectData> = [
     slug: 'aprendesk',
     imageUrl: aprendeskImage,
     projectUrl: 'https://www.aprendesk.app',
-    tags: ['SaaS', 'Gestión', 'TypeScript', 'Web App'],
+    tags: ['SaaS', 'Gestión', 'TypeScript', 'Full-Stack'],
     category: 'SaaS',
-    date: '2024-03-01',
+    date: '2025-06-01',
     keyFeatures: [
       { id: 'customManagement' },
       { id: 'saasArchitecture' },
@@ -96,8 +96,9 @@ const projectsListUnsorted: Array<ProjectData> = [
     ],
     technologiesUsed: [
       { id: 'typescript', name: 'TypeScript' },
-      { id: 'nodejs', name: 'Node.js' },
       { id: 'react', name: 'React' },
+      { id: 'nodejs', name: 'Node.js' },
+      { id: 'tailwindcss', name: 'TailwindCSS' },
     ],
   },
   {
