@@ -7,6 +7,7 @@ import jaenaaprendeImage from '@/assets/jaenaprende.png';
 import parfois from '@/assets/parfois.svg';
 import hostaletacionImage from '@/assets/hostalestacion.png';
 import rollodesarrolloImage from '@/assets/rollodesarrollo.png';
+import aprendeskImage from '@/assets/aprendesk.jpg';
 import type {
   ProjectData,
   SkillData,
@@ -83,7 +84,7 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'aprendesk',
     slug: 'aprendesk',
-    imageUrl: placeholderImage,
+    imageUrl: aprendeskImage,
     projectUrl: 'https://www.aprendesk.app',
     tags: ['SaaS', 'Gestión', 'TypeScript', 'Web App'],
     category: 'SaaS',
