@@ -117,36 +117,99 @@ export const ui = {
           'El testing exhaustivo y una arquitectura SFRA modular y bien documentada son la base de sistemas eCommerce resilientes y mantenibles a largo plazo. Trabajar con un equipo distribuido internacional fortalece la comunicación técnica y las habilidades de coordinación remota.',
       },
       aprendesk: {
-        title: 'Aprendesk · Plataforma SaaS de Gestión Empresarial',
+        title: 'Aprendesk · SaaS multi-tenant para academias',
         description:
-          'SaaS de gestión empresarial para formadores, academias y centros de capacitación. Automatiza procesos administrativos con un dashboard intuitivo, analítica avanzada y reporting en tiempo real.',
-        imageAltText: 'Plataforma SaaS Aprendesk de gestión empresarial',
-        categoryText: 'SaaS',
-        dateText: 'Jun 2024 – Presente',
+          'SaaS que he diseñado, construido y lanzado en solitario para gestionar academias de enseñanza: alumnos, matrícula, asistencia, cobros, facturación VeriFactu, portal de familias y apps móviles.',
+        imageAltText: 'Panel de gestión de Aprendesk para academias',
+        categoryText: 'SaaS · Producto propio',
+        dateText: 'Jun 2025 – Presente',
         detailedDescription:
-          'Aprendesk es una plataforma SaaS full-stack diseñada para automatizar la gestión administrativa de empresas formativas y educativas. Construida con TypeScript, React y Node.js, ofrece un dashboard intuitivo con gestión de alumnos, cursos, facturación, seguimiento de progreso y reporting avanzado. La arquitectura escalable con PostgreSQL garantiza rendimiento y seguridad en entornos multi-tenant, mientras que la interfaz mobile-first permite acceso desde cualquier dispositivo. Publicada en www.aprendesk.app con funcionalidades de integración y API REST para terceros.',
+          'Aprendesk (aprendesk.app) nació como la herramienta interna de Jaén Aprende y la convertí en un producto SaaS para cualquier academia. Cada academia tiene su propio subdominio (academia.aprendesk.app) o dominio personalizado, con tres portales: profesores/administración, familias y un superadmin desde el que gestiono el negocio. Lo he llevado de principio a fin: producto, diseño, arquitectura, desarrollo full-stack, pagos, cumplimiento fiscal, apps móviles, SEO, marketing y soporte a clientes reales. Está construido con Next.js 16 (App Router), React 19, TypeScript y Supabase, desplegado en Vercel con más de 20 tareas programadas, y el repositorio supera las 1.500 issues y pull requests.',
         keyFeatures: {
-          customManagement: {
-            title: 'Gestión Integral de Procesos',
+          multiTenant: {
+            title: 'Arquitectura multi-tenant segura',
             description:
-              'Módulos de alumnos, cursos, facturación y seguimiento adaptados a los flujos de trabajo específicos del sector educativo y formativo.',
+              'Un proxy resuelve la academia por subdominio o dominio propio. El aislamiento de datos se apoya en Postgres con políticas RLS restrictivas por academy_id, tests automáticos de RLS y revisión de permisos de funciones SECURITY DEFINER.',
           },
-          saasArchitecture: {
-            title: 'Arquitectura SaaS Escalable Multi-tenant',
+          portals: {
+            title: 'Tres portales por rol',
             description:
-              'Infraestructura robusta con aislamiento de datos, rendimiento garantizado y seguridad empresarial para múltiples clientes concurrentes.',
+              'Panel de profesores y administración, portal de familias (multidioma con next-intl: español y euskera) y panel de superadmin con métricas de crecimiento, leads, soporte, retargeting y cuadro de inversores.',
           },
-          userInterface: {
-            title: 'Dashboard Mobile-First Intuitivo',
+          payments: {
+            title: 'Cobros, facturación y VeriFactu',
             description:
-              'Interfaz moderna optimizada para accesibilidad, con UX diseñada para máxima adopción sin curva de aprendizaje.',
+              'Suscripciones SaaS con Stripe, Stripe Connect para que cada academia cobre a sus familias, Redsys, bonos, recordatorios de pago, gastos, historial de cobros y facturación electrónica conforme a VeriFactu, con reintentos automáticos.',
+          },
+          academicOps: {
+            title: 'Gestión académica diaria',
+            description:
+              'Alumnos, grupos, horarios, sedes y aulas, matrícula online con autorizaciones y lista de espera, pase de lista con extras y recuperaciones, incidencias de clase, festivos, fichaje de profesores, contratos e informes.',
+          },
+          lms: {
+            title: 'LMS y simulacros',
+            description:
+              'Cursos online, tareas, tests, certificados en PDF y simulacros de Selectividad (PAU) para captar y fidelizar alumnos.',
+          },
+          communication: {
+            title: 'Comunicación con familias',
+            description:
+              'Mensajería, anuncios editables, avisos por email (Resend/SMTP), notificaciones push y anuncios por WhatsApp con consentimiento explícito.',
+          },
+          mobileApps: {
+            title: 'Apps móviles',
+            description:
+              'Apps nativas para iOS y Android con Capacitor y notificaciones push con Firebase, además de PWA.',
+          },
+          ai: {
+            title: 'IA integrada con Claude',
+            description:
+              'Generación de preguntas de test, asistente de chat, ayuda en la resolución de tickets de soporte, redacción de emails y resúmenes periódicos con la API de Claude.',
+          },
+          growth: {
+            title: 'Marketing y crecimiento',
+            description:
+              'Web de marketing, blog y landings SEO, onboarding y periodo de prueba, nurturing por email, recuperación de registros abandonados, conversiones de Google Ads y planes con límites (free, starter, pro, enterprise).',
+          },
+          quality: {
+            title: 'Calidad y flujo de trabajo',
+            description:
+              'Tests unitarios con Vitest, e2e con Playwright contra un Supabase local desechable, CI en GitHub Actions (typecheck, RLS, detección de drift de esquema), gitflow con releases automáticas y un pipeline de agentes de IA (selección de tareas, revisión de specs, implementación y revisión de PR) con specs y criterios de aceptación.',
           },
         },
+        technicalSkills: [
+          'Arquitectura SaaS multi-tenant',
+          'Next.js App Router, Server Components y Server Actions',
+          'React y TypeScript',
+          'Postgres, modelado de datos y migraciones',
+          'Seguridad: RLS, autenticación y control de permisos',
+          'Integración de pagos (Stripe, Stripe Connect, Redsys)',
+          'Facturación electrónica y cumplimiento fiscal (VeriFactu)',
+          'Apps híbridas con Capacitor y notificaciones push',
+          'Integración de LLMs (API de Claude)',
+          'Testing unitario, de políticas y e2e',
+          'CI/CD con GitHub Actions y despliegue en Vercel',
+          'Internacionalización (i18n)',
+          'SEO técnico y analítica',
+          'Desarrollo asistido por agentes de IA',
+        ],
+        softSkills: [
+          'Visión de producto y priorización',
+          'Emprendimiento y autonomía de principio a fin',
+          'Escucha activa y trato directo con clientes',
+          'Traducir necesidades reales de academias en funcionalidades',
+          'Soporte y resolución de incidencias en producción',
+          'Comunicación clara con usuarios no técnicos',
+          'Gestión del tiempo y constancia',
+          'Toma de decisiones con información incompleta',
+          'Documentación y procesos para escalar el trabajo',
+          'Aprendizaje continuo',
+        ],
         galleryImages: {},
         challenges:
-          'Diseñar un SaaS flexible que se adapte a diferentes modelos de negocio (academias, cursos online, formación corporativa) sin comprometer la seguridad de datos multi-tenant ni la performance bajo carga.',
+          'Pasar de una herramienta interna a un producto que usan varias academias exige mucho más que código: aislar los datos de cada cliente con garantías, cumplir la normativa fiscal española, integrar varios proveedores de pago, mantener la app estable mientras se publican cambios casi a diario y, a la vez, encargarme del marketing, las ventas y el soporte.',
         learnings:
-          'Construir un SaaS propio desde cero requiere equilibrio entre features de usuario, robustez técnica y viabilidad económica. La priorización ruthless es clave: no todas las features solicitadas agregan valor al MVP. La experiencia de usuario es el multiplicador más importante para la adopción.',
+          'He aprendido que la seguridad en un SaaS se demuestra con tests, no se presupone: una sola política RLS mal escrita puede abrir datos de otra academia. También que escuchar a las academias guía mejor el producto que cualquier hoja de ruta, que automatizar calidad y releases es lo que permite avanzar rápido en solitario y que la IA multiplica la productividad cuando trabaja con specs claras y revisión.',
       },
       rolloDesarrollo: {
         title: 'Rollodesarrollo · Podcast',
@@ -384,6 +447,9 @@ export const ui = {
       galleryTitle: 'Galería',
       challengesTitle: 'Desafíos Encontrados',
       learningsTitle: 'Lecciones Aprendidas',
+      techStackTitle: 'Stack tecnológico',
+      technicalSkillsTitle: 'Skills técnicas',
+      softSkillsTitle: 'Soft skills',
       visitProjectButton: 'Visitar Proyecto',
       viewCodeButton: 'Ver Código',
     },
@@ -538,36 +604,99 @@ export const ui = {
           'Thorough testing and a modular, well-documented SFRA architecture are the foundation of resilient and maintainable eCommerce systems. Working with an international distributed team strengthens technical communication and remote coordination skills.',
       },
       aprendesk: {
-        title: 'Aprendesk · Enterprise Management SaaS Platform',
+        title: 'Aprendesk · Multi-tenant SaaS for academies',
         description:
-          'SaaS platform for training companies and educational institutions. Automates administrative processes with an intuitive dashboard, advanced analytics and real-time reporting.',
-        imageAltText: 'Aprendesk enterprise management SaaS platform',
-        categoryText: 'SaaS',
-        dateText: 'Jun 2024 – Present',
+          'A SaaS I designed, built and launched on my own to run tutoring and training academies: students, enrolment, attendance, payments, VeriFactu invoicing, a family portal and mobile apps.',
+        imageAltText: 'Aprendesk academy management dashboard',
+        categoryText: 'SaaS · Own product',
+        dateText: 'Jun 2025 – Present',
         detailedDescription:
-          'Aprendesk is a full-stack SaaS platform designed to automate administrative management for training and educational enterprises. Built with TypeScript, React and Node.js, it provides an intuitive dashboard featuring student management, course administration, billing, progress tracking and advanced reporting. The scalable multi-tenant architecture with PostgreSQL ensures performance and security for multiple concurrent clients, while the mobile-first interface enables access from any device. Live at www.aprendesk.app with REST API integration capabilities for third-party services.',
+          'Aprendesk (aprendesk.app) started as the internal tool for Jaén Aprende and I turned it into a SaaS product for any academy. Each academy gets its own subdomain (academy.aprendesk.app) or custom domain, with three portals: teachers/administration, families, and a superadmin area where I run the business. I own it end to end: product, design, architecture, full-stack development, payments, tax compliance, mobile apps, SEO, marketing and support for real customers. It is built with Next.js 16 (App Router), React 19, TypeScript and Supabase, deployed on Vercel with more than 20 scheduled jobs, and the repository has passed 1,500 issues and pull requests.',
         keyFeatures: {
-          customManagement: {
-            title: 'Comprehensive Process Management',
+          multiTenant: {
+            title: 'Secure multi-tenant architecture',
             description:
-              'Student, course, billing and progress tracking modules tailored to the specific workflows of the education and training sector.',
+              'A proxy resolves the academy from its subdomain or custom domain. Data isolation relies on Postgres with restrictive RLS policies per academy_id, automated RLS tests and permission checks on SECURITY DEFINER functions.',
           },
-          saasArchitecture: {
-            title: 'Scalable Multi-Tenant SaaS Architecture',
+          portals: {
+            title: 'Three role-based portals',
             description:
-              'Robust infrastructure with data isolation, guaranteed performance and enterprise-grade security for multiple concurrent clients.',
+              'Teacher and admin panel, family portal (multilingual with next-intl: Spanish and Basque) and a superadmin panel with growth metrics, leads, support, retargeting and an investor board.',
           },
-          userInterface: {
-            title: 'Mobile-First Intuitive Dashboard',
+          payments: {
+            title: 'Payments, invoicing and VeriFactu',
             description:
-              'Modern interface optimised for accessibility, with UX designed for maximum adoption and minimal learning curve.',
+              'SaaS subscriptions with Stripe, Stripe Connect so each academy can charge its families, Redsys, class packs, payment reminders, expenses, payment history and electronic invoicing compliant with Spain’s VeriFactu, with automatic retries.',
+          },
+          academicOps: {
+            title: 'Day-to-day academy management',
+            description:
+              'Students, groups, timetables, sites and classrooms, online enrolment with consents and waiting lists, attendance with extra and make-up classes, class incidents, holidays, teacher time tracking, contracts and reports.',
+          },
+          lms: {
+            title: 'LMS and mock exams',
+            description:
+              'Online courses, homework, tests, PDF certificates and university entrance (PAU) mock exams to attract and retain students.',
+          },
+          communication: {
+            title: 'Family communication',
+            description:
+              'Messaging, editable announcements, email notifications (Resend/SMTP), push notifications and WhatsApp announcements with explicit consent.',
+          },
+          mobileApps: {
+            title: 'Mobile apps',
+            description:
+              'Native iOS and Android apps built with Capacitor and Firebase push notifications, plus a PWA.',
+          },
+          ai: {
+            title: 'AI built in with Claude',
+            description:
+              'Test question generation, a chat assistant, help resolving support tickets, email drafting and periodic digests using the Claude API.',
+          },
+          growth: {
+            title: 'Marketing and growth',
+            description:
+              'Marketing site, blog and SEO landing pages, onboarding and free trial, email nurturing, abandoned sign-up recovery, Google Ads conversions and tiered plans with limits (free, starter, pro, enterprise).',
+          },
+          quality: {
+            title: 'Quality and workflow',
+            description:
+              'Unit tests with Vitest, e2e tests with Playwright against a disposable local Supabase, CI on GitHub Actions (typecheck, RLS, schema drift detection), gitflow with automated releases and an AI agent pipeline (task picking, spec review, implementation and PR review) driven by specs and acceptance criteria.',
           },
         },
+        technicalSkills: [
+          'Multi-tenant SaaS architecture',
+          'Next.js App Router, Server Components and Server Actions',
+          'React and TypeScript',
+          'Postgres, data modelling and migrations',
+          'Security: RLS, authentication and access control',
+          'Payment integrations (Stripe, Stripe Connect, Redsys)',
+          'E-invoicing and tax compliance (VeriFactu)',
+          'Hybrid apps with Capacitor and push notifications',
+          'LLM integration (Claude API)',
+          'Unit, policy and e2e testing',
+          'CI/CD with GitHub Actions and Vercel deployments',
+          'Internationalisation (i18n)',
+          'Technical SEO and analytics',
+          'AI agent-assisted development',
+        ],
+        softSkills: [
+          'Product vision and prioritisation',
+          'Entrepreneurship and end-to-end ownership',
+          'Active listening and direct customer contact',
+          'Turning real academy needs into features',
+          'Production support and incident handling',
+          'Clear communication with non-technical users',
+          'Time management and consistency',
+          'Decision-making with incomplete information',
+          'Documentation and processes to scale the work',
+          'Continuous learning',
+        ],
         galleryImages: {},
         challenges:
-          'Designing a flexible SaaS that adapts to different business models (academies, online courses, corporate training) without compromising multi-tenant data security or performance under load.',
+          'Going from an internal tool to a product used by several academies takes far more than code: isolating each customer’s data with real guarantees, complying with Spanish tax regulations, integrating several payment providers, keeping the app stable while shipping changes almost daily, and handling marketing, sales and support at the same time.',
         learnings:
-          'Building a SaaS from scratch requires balancing user features, technical robustness and financial viability. Ruthless prioritisation is key: not all requested features add MVP value. User experience is the strongest multiplier for adoption.',
+          'Security in a SaaS has to be proven with tests, not assumed: a single badly written RLS policy can expose another academy’s data. Listening to academies guides the product better than any roadmap, automating quality and releases is what lets you move fast on your own, and AI multiplies productivity when it works from clear specs with review.',
       },
       rolloDesarrollo: {
         title: 'Rollodesarrollo · Podcast',
@@ -801,6 +930,9 @@ export const ui = {
       galleryTitle: 'Gallery',
       challengesTitle: 'Challenges',
       learningsTitle: 'Learnings',
+      techStackTitle: 'Tech stack',
+      technicalSkillsTitle: 'Technical skills',
+      softSkillsTitle: 'Soft skills',
       visitProjectButton: 'Visit Project',
       viewCodeButton: 'View Code',
     },

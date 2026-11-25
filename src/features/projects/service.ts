@@ -8,6 +8,7 @@ import parfois from '@/assets/parfois.svg';
 import hostaletacionImage from '@/assets/hostalestacion.png';
 import rollodesarrolloImage from '@/assets/rollodesarrollo.png';
 import aprendeskImage from '@/assets/aprendesk.jpg';
+import aprendeskLogo from '@/assets/aprendesk-logo.png';
 import type {
   ProjectData,
   SkillData,
@@ -85,20 +86,42 @@ const projectsListUnsorted: Array<ProjectData> = [
     id: 'aprendesk',
     slug: 'aprendesk',
     imageUrl: aprendeskImage,
-    projectUrl: 'https://www.aprendesk.app',
-    tags: ['SaaS', 'Gestión', 'TypeScript', 'Full-Stack'],
+    logoUrl: aprendeskLogo,
+    projectUrl: 'https://aprendesk.app',
+    tags: ['SaaS', 'Next.js', 'Supabase', 'Multi-tenant', 'Full-Stack'],
     category: 'SaaS',
     date: '2025-06-01',
     keyFeatures: [
-      { id: 'customManagement' },
-      { id: 'saasArchitecture' },
-      { id: 'userInterface' },
+      { id: 'multiTenant' },
+      { id: 'portals' },
+      { id: 'payments' },
+      { id: 'academicOps' },
+      { id: 'lms' },
+      { id: 'communication' },
+      { id: 'mobileApps' },
+      { id: 'ai' },
+      { id: 'growth' },
+      { id: 'quality' },
     ],
     technologiesUsed: [
+      { id: 'nextjs', name: 'Next.js 16' },
+      { id: 'react', name: 'React 19' },
       { id: 'typescript', name: 'TypeScript' },
-      { id: 'react', name: 'React' },
-      { id: 'nodejs', name: 'Node.js' },
-      { id: 'tailwindcss', name: 'TailwindCSS' },
+      { id: 'supabase', name: 'Supabase (Postgres, Auth, Storage, RLS)' },
+      { id: 'tailwindcss', name: 'Tailwind CSS v4' },
+      { id: 'shadcn', name: 'shadcn/ui + Radix' },
+      { id: 'stripe', name: 'Stripe + Stripe Connect' },
+      { id: 'redsys', name: 'Redsys' },
+      { id: 'verifactu', name: 'VeriFactu' },
+      { id: 'capacitor', name: 'Capacitor (iOS / Android)' },
+      { id: 'firebase', name: 'Firebase Cloud Messaging' },
+      { id: 'anthropic', name: 'Claude API' },
+      { id: 'nextIntl', name: 'next-intl' },
+      { id: 'vercel', name: 'Vercel' },
+      { id: 'upstash', name: 'Upstash Redis' },
+      { id: 'vitest', name: 'Vitest' },
+      { id: 'playwright', name: 'Playwright' },
+      { id: 'githubActions', name: 'GitHub Actions' },
     ],
   },
   {
@@ -261,6 +284,14 @@ function translateProject(
     galleryImagesTranslated,
     challenges: i18nData?.challenges ?? 'Challenges information missing',
     learnings: i18nData?.learnings ?? 'Learnings information missing',
+    technicalSkills:
+      'technicalSkills' in i18nData
+        ? (i18nData.technicalSkills as Array<string>)
+        : undefined,
+    softSkills:
+      'softSkills' in i18nData
+        ? (i18nData.softSkills as Array<string>)
+        : undefined,
   };
 }
 

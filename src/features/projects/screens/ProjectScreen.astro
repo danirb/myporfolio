@@ -27,6 +27,35 @@ const { project, t, lang } = Astro.props;
     </a>
 
     <Heading title={project.title} />
+    {
+      project.logoUrl && (
+        <a
+          href={project.projectUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="not-prose mb-6 inline-flex items-center gap-3 rounded-xl border bg-card px-3 py-2 no-underline transition-colors hover:bg-muted"
+        >
+          <Image
+            src={project.logoUrl}
+            alt={`Logo ${project.title.split('·')[0].trim()}`}
+            width={48}
+            height={48}
+            class="size-12 rounded-lg"
+          />
+          <span class="flex flex-col">
+            <span class="text-base font-semibold text-foreground">
+              {project.title.split('·')[0].trim()}
+            </span>
+            {project.projectUrl && (
+              <span class="text-sm text-muted-foreground">
+                {project.projectUrl.replace(/^https?:\/\//, '')}
+              </span>
+            )}
+          </span>
+          <ExternalLink className="size-4 text-muted-foreground" />
+        </a>
+      )
+    }
     <div
       class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-600 dark:text-gray-400"
     >
@@ -93,6 +122,51 @@ const { project, t, lang } = Astro.props;
             </ul>
           </section>
         )
+    }
+
+    {
+      project.technologiesUsed && project.technologiesUsed.length > 0 && (
+        <section class="mb-8">
+          <h2>{t.projectDetailPage?.techStackTitle ?? 'Tech stack'}</h2>
+          <div class="not-prose flex flex-wrap gap-2">
+            {project.technologiesUsed.map((tech) => (
+              <Badge variant="outline">{tech.name}</Badge>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      Boolean(project.technicalSkills?.length || project.softSkills?.length) && (
+        <div class="grid grid-cols-1 md:gap-8 md:grid-cols-2 mb-8">
+          {project.technicalSkills && project.technicalSkills.length > 0 && (
+            <section>
+              <h2 class="mt-0">
+                {t.projectDetailPage?.technicalSkillsTitle ??
+                  'Technical skills'}
+              </h2>
+              <ul class="pl-5 list-disc">
+                {project.technicalSkills.map((skill) => (
+                  <li>{skill}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+          {project.softSkills && project.softSkills.length > 0 && (
+            <section>
+              <h2 class="mt-0">
+                {t.projectDetailPage?.softSkillsTitle ?? 'Soft skills'}
+              </h2>
+              <ul class="pl-5 list-disc">
+                {project.softSkills.map((skill) => (
+                  <li>{skill}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </div>
+      )
     }
 
     {/* Gallery */}
