@@ -120,7 +120,7 @@ export const ui = {
         title: 'Aprendesk · SaaS multi-tenant para academias',
         description:
           'SaaS que he diseñado, construido y lanzado en solitario para gestionar academias de enseñanza: alumnos, matrícula, asistencia, cobros, facturación VeriFactu, portal de familias y apps móviles.',
-        imageAltText: 'Panel de gestión de Aprendesk para academias',
+        imageAltText: 'Logo de Aprendesk',
         categoryText: 'SaaS · Producto propio',
         dateText: 'Jun 2025 – Presente',
         detailedDescription:
@@ -205,7 +205,12 @@ export const ui = {
           'Documentación y procesos para escalar el trabajo',
           'Aprendizaje continuo',
         ],
-        galleryImages: {},
+        galleryImages: {
+          workspace: {
+            alt: 'Espacio de trabajo de una academia que usa Aprendesk',
+            caption: 'Aprendesk nació en el día a día de una academia real.',
+          },
+        },
         challenges:
           'Pasar de una herramienta interna a un producto que usan varias academias exige mucho más que código: aislar los datos de cada cliente con garantías, cumplir la normativa fiscal española, integrar varios proveedores de pago, mantener la app estable mientras se publican cambios casi a diario y, a la vez, encargarme del marketing, las ventas y el soporte.',
         learnings:
@@ -607,7 +612,7 @@ export const ui = {
         title: 'Aprendesk · Multi-tenant SaaS for academies',
         description:
           'A SaaS I designed, built and launched on my own to run tutoring and training academies: students, enrolment, attendance, payments, VeriFactu invoicing, a family portal and mobile apps.',
-        imageAltText: 'Aprendesk academy management dashboard',
+        imageAltText: 'Aprendesk logo',
         categoryText: 'SaaS · Own product',
         dateText: 'Jun 2025 – Present',
         detailedDescription:
@@ -692,7 +697,12 @@ export const ui = {
           'Documentation and processes to scale the work',
           'Continuous learning',
         ],
-        galleryImages: {},
+        galleryImages: {
+          workspace: {
+            alt: 'Workspace of an academy using Aprendesk',
+            caption: 'Aprendesk was born in the daily life of a real academy.',
+          },
+        },
         challenges:
           'Going from an internal tool to a product used by several academies takes far more than code: isolating each customer’s data with real guarantees, complying with Spanish tax regulations, integrating several payment providers, keeping the app stable while shipping changes almost daily, and handling marketing, sales and support at the same time.',
         learnings:

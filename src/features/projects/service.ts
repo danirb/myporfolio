@@ -85,8 +85,9 @@ const projectsListUnsorted: Array<ProjectData> = [
   {
     id: 'aprendesk',
     slug: 'aprendesk',
-    imageUrl: aprendeskImage,
+    imageUrl: aprendeskLogo,
     logoUrl: aprendeskLogo,
+    galleryImages: [{ id: 'workspace', src: aprendeskImage }],
     projectUrl: 'https://aprendesk.app',
     tags: ['SaaS', 'Next.js', 'Supabase', 'Multi-tenant', 'Full-Stack'],
     category: 'SaaS',
